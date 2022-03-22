@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from '../components/header/Header';
 import InnerFooter from '../components/InnerFooter/InnerFooter';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import assets from '../assets/images';
 
@@ -29,8 +29,8 @@ const CollectedNfts = () => {
                     <img src={assets.projectImg} alt='' />
                   </a>
                 </div>
-                <Link to='/owned-nfts' className='collected_nfts_cta'>
-                  Claim Physical
+                <Link href='/owned-nfts'>
+                  <span className='collected_nfts_cta' style={{ cursor: "pointer" }}>Claim Physical</span>
                 </Link>
               </div>
             ))}

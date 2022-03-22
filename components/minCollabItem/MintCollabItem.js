@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const MintCollabItem = ({ title, description, img }) => {
   return (
@@ -10,8 +10,8 @@ const MintCollabItem = ({ title, description, img }) => {
             <img src={img} alt='' />
           </a>
         </div>
-        <Link to='/burned-nfts' className='mint_collabs_cta'>
-          Mint
+        <Link href='/burned-nfts'>
+          <span className='mint_collabs_cta' style={{ cursor: "pointer" }}>Mint</span>
         </Link>
       </div>
       <div className='mint_collabs_details'>

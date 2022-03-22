@@ -4,7 +4,7 @@ import Header from '../components/header/Header';
 import InnerFooter from '../components/InnerFooter/InnerFooter';
 
 import assets from '../assets/images';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const nfts = ['Claim Cyberkong', 'Claim offical collab'];
 
@@ -46,8 +46,8 @@ const ClaimNfts = () => {
                   <p>Coming Soon</p>
                 </div>
               </div>
-              <Link to='/upload-nfts' className='collected_nfts_cta'>
-                Create custom 1 of 1
+              <Link href='/upload-nfts'>
+                <span className='collected_nfts_cta' style={{ cursor: "pointer" }}>Create custom 1 of 1</span>
               </Link>
             </div>
           </div>

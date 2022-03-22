@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import assets from '../../assets/images';
 
 const Header = () => {
+  console.log(assets.logo.src);
   return (
     <header className='main_header'>
       <div className='wrapper'>
@@ -15,16 +16,16 @@ const Header = () => {
             </a>
             <ul className='main_menu'>
               <li>
-                <Link to='/'>Home</Link>
+                <Link href='/'>Home</Link>
               </li>
               <li>
-                <Link to='/collected-nfts'>Collected NFTs</Link>
+                <Link href='/collected-nfts'>Collected NFTs</Link>
               </li>
               <li>
-                <Link to='/claim-nfts'>Claim NFTs</Link>
+                <Link href='/claim-nfts'>Claim NFTs</Link>
               </li>
               <li>
-                <Link to='/mint-nfts'>Mint NFTs</Link>
+                <Link href='/mint-nfts'>Mint NFTs</Link>
               </li>
             </ul>
             <span className='mob_menu_icon'></span>
