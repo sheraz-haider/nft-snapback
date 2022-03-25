@@ -12,28 +12,28 @@ function Marketplace({ Component, pageProps }) {
   const [balance, setBalance] = useState(0.00)
   const [isRegistered, setIsRegistered] = useState(false)
   const [popupOpened, setPopupOpened] = useState(false)
-  useEffect(() => {
-    if(!address)
-      connect()
-  }, [address])
-  async function connect() {
-    const web3Modal = new Web3Modal()
-    const connection = await web3Modal.connect()
-    const provider = new ethers.providers.Web3Provider(connection)
-    const _address = await provider.getSigner().getAddress()
-    const _bal = await provider.getSigner().getBalance()
-    const _artist = await axios({
-      method: 'get',
-      url: `/api/v1/artists`,
-      params: { address: _address },
-    })
-    if(_artist.data.length) {
-      setIsRegistered(true)
-    }
-    setBalance(Number(ethers.utils.formatEther(Number(_bal).toString())).toFixed(2))
-    setAddress(_address)
-    console.log(address, _artist.data);
-  }
+  // useEffect(() => {
+  //   if(!address)
+  //     connect()
+  // }, [address])
+  // async function connect() {
+  //   const web3Modal = new Web3Modal()
+  //   const connection = await web3Modal.connect()
+  //   const provider = new ethers.providers.Web3Provider(connection)
+  //   const _address = await provider.getSigner().getAddress()
+  //   const _bal = await provider.getSigner().getBalance()
+  //   const _artist = await axios({
+  //     method: 'get',
+  //     url: `/api/v1/artists`,
+  //     params: { address: _address },
+  //   })
+  //   if(_artist.data.length) {
+  //     setIsRegistered(true)
+  //   }
+  //   setBalance(Number(ethers.utils.formatEther(Number(_bal).toString())).toFixed(2))
+  //   setAddress(_address)
+  //   console.log(address, _artist.data);
+  // }
 
 
   return (

@@ -31,6 +31,7 @@ const footerLogo = require('./footer_logo.png').default
 const youtube = require('./youtube_icon.png').default
 const instagramHolo = require('./instagram_icon_iner.png').default
 const discord = require('./discord_icon.png').default
+const punk = require('./unofficial-punk.jpg').default
 
 const assets = {
   headerImg: headerImg.src,
@@ -66,6 +67,7 @@ const assets = {
   youtube: youtube.src,
   instagramHolo: instagramHolo.src,
   discord: discord.src,
+  punk: punk.src,
 };
 
 export default assets;

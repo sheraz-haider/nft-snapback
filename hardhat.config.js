@@ -30,6 +30,10 @@ module.exports = {
     ropsten: {
       url: process.env.ROPSTEN_URL,
       accounts: [process.env.PRIVATE_KEY]
+    },
+    rinkeby: {
+      url: process.env.RINKEBY_URL,
+      accounts: [process.env.PRIVATE_KEY]
     }
   },
   gasReporter: {

@@ -1334,7 +1334,7 @@ body.toggle {
   margin-top: 20px;
   display: block;
 }
-.collected_nfts_cta:hover {
+.collected_nfts_cta:hover, .collected_nfts_cta.claimed {
   background: none;
   border-color: #fad505;
 }
@@ -1495,7 +1495,7 @@ body.toggle {
   line-height: 25px;
   color: #ffffff;
 }
-.upload_nfts_form_field input {
+.upload_nfts_form_field input, .upload_nfts_form_field select {
   height: 54px;
   width: 100%;
   border: none;
@@ -1508,7 +1508,10 @@ body.toggle {
   color: #ffffff;
   border-radius: 10px;
 }
-.upload_nfts_form_field input:focus {
+.upload_nfts_form_field select option {
+  color: #000
+}
+.upload_nfts_form_field input:focus, .upload_nfts_form_field select:focus {
   outline: none;
 }
 .upload_nfts_form_field.custom_upload label {

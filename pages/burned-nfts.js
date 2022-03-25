@@ -1,11 +1,40 @@
 import React from 'react';
 import Header from '../components/header/Header';
 import InnerFooter from '../components/InnerFooter/InnerFooter';
-
+import axios from 'axios'
 import assets from '../assets/images';
 import BurnedNft from '../components/burnedNft/BurnedNft';
+import { useEffect, useState } from 'react'
 
 const BurnedNfts = () => {
+  const [nfts, setNfts] = useState([])
+
+  useEffect(() => {
+    loadNFTs()
+  }, [])
+
+  async function loadNFTs() {
+    try {
+      const __nfts = await axios({
+        method: 'get',
+        url: `/api/v1/snapback`,
+        // data: {
+        //   ...item,
+        //   owner: address,
+        // },
+      })
+      if(__nfts.data) {
+        console.log(__nfts.data);
+        setNfts(__nfts.data.filter(i => i.burnt))
+      }
+
+      setLoadingState('loaded')
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
+
   return (
     <>
       <Header />
@@ -20,11 +49,14 @@ const BurnedNfts = () => {
       </div>
       <div className='mint_collabs'>
         <div className='wrapper'>
-          {Array.from({ length: 2 }, (_, i) => i).map(item => (
+          {nfts.map(item => (
             <BurnedNft
-              key={item}
-              title='O.G.C || AVASTAR Series 1'
-              img={assets.projectImg}
+              key={`item-${item._id}`}
+              title={`O.G.C || ${item.name.toUpperCase()} Series 1`}
+              img={item.image}
+              item={item}
+              back={() => {loadNFTs();}}
+              type={`shippingStatus`}
             />
           ))}
         </div>

@@ -1,11 +1,44 @@
 import React from 'react';
-
+import { useEffect, useState } from 'react'
+import { ethers } from 'ethers'
+import Web3Modal from "web3modal"
 import Link from 'next/link';
 
 import assets from '../../assets/images';
 
 const Header = () => {
-  console.log(assets.logo.src);
+  const [address, setAddress] = useState(null)
+  const [balance, setBalance] = useState(0.00)
+  const [popupOpened, setPopupOpened] = useState(false)
+
+  useEffect(() => {
+    // if(!address)
+      connect()
+  }, [address])
+
+  async function connect() {
+    const web3Modal = new Web3Modal()
+    const connection = await web3Modal.connect()
+    const provider = new ethers.providers.Web3Provider(connection)
+    const _address = await provider.getSigner().getAddress()
+    const _bal = await provider.getSigner().getBalance()
+    // const _artist = await axios({
+    //   method: 'get',
+    //   url: `/api/v1/artists`,
+    //   params: { address: _address },
+    // })
+    // if(_artist.data.length) {
+    //   setIsRegistered(true)
+    // }
+    setBalance(Number(ethers.utils.formatEther(Number(_bal).toString())).toFixed(2))
+    setAddress(_address)
+    console.log(address);
+  }
+
+  async function disconnect() {
+    setAddress(null)
+  }
+
   return (
     <header className='main_header'>
       <div className='wrapper'>
@@ -48,39 +81,43 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <div
-              className='header_custom_select connect'
-              style={{ display: 'none' }}
-            >
-              <a href='javascript:void(0);'>Connect Wallet</a>
-            </div>
-            <div className='header_custom_select'>
-              <a href='javascript:void(0);'>Connected Wallet</a>
-              <div className='wallet_drop_down'>
-                <div className='wallet_drop_down_iner'>
-                  <div className='wallet_drop_down_top'>
-                    <h3>Your Wallet</h3>
-                    <div className='header_wallet'>
-                      <div className='header_wallet_left'>
-                        <div className='header_wallet_img'>
-                          <img src={assets.wallet} alt='' />
+            {!address ? (
+              <div
+                className='header_custom_select connect'
+              >
+                <a href='#' onClick={connect}>Connect Wallet</a>
+              </div>
+            ) : (
+              <div className='header_custom_select'>
+                <a href='#'>Connected Wallet</a>
+                <div className='wallet_drop_down'>
+                  <div className='wallet_drop_down_iner'>
+                    <div className='wallet_drop_down_top'>
+                      <h3>Your Wallet</h3>
+                      <div className='header_wallet'>
+                        <div className='header_wallet_left'>
+                          <div className='header_wallet_img'>
+                            <img src={assets.wallet} alt='' />
+                          </div>
+                          <div className='header_wallet_details'>
+                            <h4>{address.slice(0, 13) + '...' + address.slice(35)}</h4>
+                            <p>Metamask</p>
+                          </div>
                         </div>
-                        <div className='header_wallet_details'>
-                          <h4>0x09750ad...360fdb7</h4>
-                          <p>Phantom</p>
-                        </div>
+                        <a href='#'>
+                          <img src={assets.copyIcon} alt='' />
+                        </a>
                       </div>
-                      <a href='#'>
-                        <img src={assets.copyIcon} alt='' />
-                      </a>
                     </div>
-                  </div>
-                  <div className='wallet_drop_down_btm'>
-                    <a href='#'>Disconnect Wallet</a>
+                    <div className='wallet_drop_down_btm'>
+                      <a href='#' onClick={disconnect}>Disconnect Wallet</a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
+
+
           </div>
         </div>
       </div>
