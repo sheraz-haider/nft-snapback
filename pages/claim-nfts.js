@@ -46,9 +46,9 @@ const ClaimNfts = () => {
                   <p>Coming Soon</p>
                 </div>
               </div>
-              <Link href='/upload-nfts'>
+              {/* <Link href='/upload-nfts'> */}
                 <span className='collected_nfts_cta' style={{ cursor: "pointer" }}>Create custom 1 of 1</span>
-              </Link>
+              {/* </Link> */}
             </div>
           </div>
         </div>
