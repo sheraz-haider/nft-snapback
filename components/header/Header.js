@@ -10,9 +10,10 @@ const Header = () => {
   const [address, setAddress] = useState(null)
   const [balance, setBalance] = useState(0.00)
   const [popupOpened, setPopupOpened] = useState(false)
+  const [loggedOut, setLoggedOut] = useState(false);
 
   useEffect(() => {
-    // if(!address)
+    if(!loggedOut)
       connect()
   }, [address])
 
@@ -36,6 +37,7 @@ const Header = () => {
   }
 
   async function disconnect() {
+    setLoggedOut(true)
     setAddress(null)
   }
 
