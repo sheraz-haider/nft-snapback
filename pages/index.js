@@ -77,7 +77,7 @@ const Index = () => {
               </h2>
               <div className='hero_container_buttons'>
                 <Link href='/collected-nfts'>Claim Now</Link>
-                <a href='#'>Shop on Open Sea</a>
+                <a>Shop on Open Sea</a>
               </div>
             </div>
             <div className='hero_container_img'>
