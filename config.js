@@ -1,3 +1,1 @@
-
-  export const nftaddress = "0x2BbDA997a98f0CBf99297099eFcD95aA05e5389c"
-  
+  export const nftaddress = "0x5951987c5F25144E6DCBB8220765A71ad5eC020B"
