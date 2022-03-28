@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const MintCollabItem = ({ title, description, img, minting, mint }) => {
+const MintCollabItem = ({ title, description, img, minting, mint, id }) => {
   return (
     <div className='mint_collabs_main'>
       <div className='mint_collabs_img'>
@@ -11,7 +11,7 @@ const MintCollabItem = ({ title, description, img, minting, mint }) => {
           </a>
         </div>
         {/* <Link href='/upload-nfts'> */}
-          {minting ? (
+          {minting && minting === id ? (
             <span className='mint_collabs_cta' style={{ cursor: "pointer", fontStyle: "italic" }}>Minting...</span>
           ) : (
             <span className='mint_collabs_cta' style={{ cursor: "pointer" }} onClick={mint}>Mint</span>

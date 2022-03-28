@@ -172,7 +172,7 @@ const CollectedNfts = () => {
                   </div>
                   {/* <Link href='/owned-nfts'> */}
                     {item.burnt ? (
-                      <span className='collected_nfts_cta claimed' style={{ cursor: "pointer" }} onClick={() => setUpdateShippingAddress(item)}>Shipping Details</span>
+                      <span className='collected_nfts_cta claimed' style={{ cursor: "pointer" }} onClick={() => setUpdateShippingAddress(item)}>Shipping Details ({item.shippingStatus})</span>
                     ) : (
                       <span className='collected_nfts_cta' style={{ cursor: "pointer" }} onClick={() => burnNft(item)}>Claim Physical</span>
                     )}

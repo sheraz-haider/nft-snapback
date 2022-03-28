@@ -49,6 +49,7 @@ const nfts = [
 const MintNfts = () => {
   const [address, setAddress] = useState(null)
   const [wait, setWait] = useState(null)
+  const [minting, setMinting] = useState(null);
 
   useEffect(() => {
     if(!address)
@@ -72,6 +73,7 @@ const MintNfts = () => {
 
   const mintToken = async (item) => {
     setWait('Minting token...')
+    setMinting(item.id)
     const web3Modal = new Web3Modal()
     const connection = await web3Modal.connect()
     const provider = new ethers.providers.Web3Provider(connection)
@@ -113,6 +115,7 @@ const MintNfts = () => {
         draggable: true,
       });
       setWait(null)
+      setMinting(null)
     }
 
     // router.push('/')
@@ -136,9 +139,10 @@ const MintNfts = () => {
             <MintCollabItem
               key={`nft-${item.id}`}
               img={item.image}
+              id={item.id}
               title={item.name}
               description={item.description}
-              minting={wait !== null}
+              minting={minting}
               mint={() => mintToken(item)}
             />
           ))}
