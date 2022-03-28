@@ -1,11 +1,44 @@
 import React, { useRef } from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-
+import Link from 'next/link'
 import assets from '../assets/images';
 
 import TeamMember from '../components/teamMember/TeamMember';
 import FaqItem from '../components/faqItem/FaqItem';
+
+
+
+const nfts = [
+  {
+    id: 1,
+    name: "Avastars",
+    description: "Rizzle The 1st Official Rizzle Merchandise collaborated with NFTsnapback. If you you don’t know anything about Rizzle well he is a MetaVerse Maximum-list. Has started and found some amazing projects in the space. Notably known for being Co-founder of project like Avastars, NFT42, and host of many shows across the meatverse & the Matthew & Rizzle show. He is also currently working on #therizzleproject. 100% proceeds of the sale of the Rizzle Avastars collection will go to a charity Foundation that is Started up by NFTsnapback. More information to come out. Now Officially you can buy the 1st Rizzle Avastars merchandise in partnership with NFTsnapabck.",
+    image: "https://bafybeihwvuaz2es7yatd5ozblviptnu6x7n6rv465qbqewpmoxeha7wvcy.ipfs.infura-ipfs.io/",
+    video: "https://bafybeibae5mmqj2j63tyjqbn3dpwrx34og6mccngo4cwvm2swxeyrvkdre.ipfs.infura-ipfs.io/"
+  },
+  {
+    id: 2,
+    name: "Drippers",
+    description: "Rizzle The 1st Official Rizzle Merchandise collaborated with NFTsnapback. If you you don’t know anything about Rizzle well he is a MetaVerse Maximum-list. Has started and found some amazing projects in the space. Notably known for being Co-founder of project like Avastars, NFT42, and host of many shows across the meatverse & the Matthew & Rizzle show. He is also currently working on #therizzleproject. 100% proceeds of the sale of the Rizzle Avastars collection will go to a charity Foundation that is Started up by NFTsnapback. More information to come out. Now Officially you can buy the 1st Rizzle Avastars merchandise in partnership with NFTsnapabck.",
+    image: "https://bafybeifrfrf6roheuoyjno7ylu235t7df23x2yhhhx2atmkk5h2l2s7xtu.ipfs.infura-ipfs.io/",
+    video: "https://bafybeiblyf2qulzjjtcskgpb7mfxshw2bruyuzrm7gcp36nfb53hpiwpja.ipfs.infura-ipfs.io/"
+  },
+  {
+    id: 3,
+    name: "Unofficial Punks",
+    description: "Rizzle The 1st Official Rizzle Merchandise collaborated with NFTsnapback. If you you don’t know anything about Rizzle well he is a MetaVerse Maximum-list. Has started and found some amazing projects in the space. Notably known for being Co-founder of project like Avastars, NFT42, and host of many shows across the meatverse & the Matthew & Rizzle show. He is also currently working on #therizzleproject. 100% proceeds of the sale of the Rizzle Avastars collection will go to a charity Foundation that is Started up by NFTsnapback. More information to come out. Now Officially you can buy the 1st Rizzle Avastars merchandise in partnership with NFTsnapabck.",
+    image: "https://bafybeihrlxlcreoaaeqi542553gk3kpj567yq3fyrdfgizknp2um4rlwka.ipfs.infura-ipfs.io/",
+    video: "https://bafybeibbezcrdcdxmzm37xvthumpai5hwikuk6agppskzrgd4c7qpikvgu.ipfs.infura-ipfs.io/"
+  },
+  {
+    id: 4,
+    name: "Cocain Cowboy",
+    description: "Rizzle The 1st Official Rizzle Merchandise collaborated with NFTsnapback. If you you don’t know anything about Rizzle well he is a MetaVerse Maximum-list. Has started and found some amazing projects in the space. Notably known for being Co-founder of project like Avastars, NFT42, and host of many shows across the meatverse & the Matthew & Rizzle show. He is also currently working on #therizzleproject. 100% proceeds of the sale of the Rizzle Avastars collection will go to a charity Foundation that is Started up by NFTsnapback. More information to come out. Now Officially you can buy the 1st Rizzle Avastars merchandise in partnership with NFTsnapabck.",
+    image: "https://bafybeifdq7dsqe4zmzprddkrtzyjx456h46wgjwhysntvm3kv2h3slyr3u.ipfs.infura-ipfs.io/",
+    video: "https://bafybeiaaav5f3q7tshx5vwe5pf7ohhdlo6uptpjcbt556c7cw5rd2uagkm.ipfs.infura-ipfs.io/"
+  },
+];
 
 const projects = ['Avastars', 'Drippers', 'Unoffical Punks', 'Cocain Cowboy'];
 
@@ -43,7 +76,7 @@ const Index = () => {
                 artwork of your favourite NFT into NFTsnapback
               </h2>
               <div className='hero_container_buttons'>
-                <a href='#'>Claim Now</a>
+                <Link href='/collected-nfts'>Claim Now</Link>
                 <a href='#'>Shop on Open Sea</a>
               </div>
             </div>
@@ -186,14 +219,16 @@ const Index = () => {
             </p>
           </div>
           <ul className='nfts_projects_list'>
-            {projects.map((project, index) => (
+            {nfts.map((nft, index) => (
               <li key={index}>
-                <a href='#'>
-                  <div className='nfts_projects_img'>
-                    <img src={assets.projectImg} alt='' />
-                  </div>
-                  <span>{project}</span>
-                </a>
+                <Link href='/mint-nfts'>
+                  <a>
+                    <div className='nfts_projects_img'>
+                      <img src={nft.image} alt='' />
+                    </div>
+                    <span>{nft.name}</span>
+                  </a>
+                </Link>
               </li>
             ))}
           </ul>
