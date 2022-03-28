@@ -31,9 +31,18 @@ const ClaimNfts = () => {
                     <img src={assets.projectImg} alt='' />
                   </a>
                 </div>
-                <a href='#' className='collected_nfts_cta'>
-                  {nft}
-                </a>
+                {nft === 'Claim offical collab' ? (
+                  <Link href='/mint-nfts'>
+                    <a href='#' className='collected_nfts_cta'>
+                      {nft}
+                    </a>
+                  </Link>
+                ) : (
+                  <a href='#' className='collected_nfts_cta' style={{ cursor: "default" }}>
+                    {nft}
+                  </a>
+                )}
+
               </div>
             ))}
             <div className='collected_nfts_cont'>
@@ -47,7 +56,7 @@ const ClaimNfts = () => {
                 </div>
               </div>
               {/* <Link href='/upload-nfts'> */}
-                <span className='collected_nfts_cta' style={{ cursor: "pointer" }}>Create custom 1 of 1</span>
+                <span className='collected_nfts_cta' >Create custom 1 of 1</span>
               {/* </Link> */}
             </div>
           </div>
