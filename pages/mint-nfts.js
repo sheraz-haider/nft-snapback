@@ -12,6 +12,8 @@ import axios from 'axios'
 
 import MintCollabItem from '../components/minCollabItem/MintCollabItem';
 
+import { ToastContainer, toast } from 'react-toastify';
+
 const nfts = [
   {
     id: 1,
@@ -63,6 +65,11 @@ const MintNfts = () => {
     console.log(address);
   }
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+
   const mintToken = async (item) => {
     setWait('Minting token...')
     const web3Modal = new Web3Modal()
@@ -70,29 +77,44 @@ const MintNfts = () => {
     const provider = new ethers.providers.Web3Provider(connection)
     const signer = provider.getSigner()
 
-    /* next, create the item */
-    let contract = new ethers.Contract(nftaddress, Snapback.abi, signer)
-    const tokenPrice = ethers.utils.parseUnits('0.08', 'ether')
+    try {
+      /* next, create the item */
+      let contract = new ethers.Contract(nftaddress, Snapback.abi, signer)
+      const tokenPrice = ethers.utils.parseUnits('0.08', 'ether')
 
-    let transaction = await contract.mintToken(item.id, {
-      value: tokenPrice
-    })
-    let tx = await transaction.wait()
-    console.log(tx);
+      let transaction = await contract.mintToken(item.id, {
+        value: tokenPrice
+      })
+      let tx = await transaction.wait()
+      console.log(tx);
 
-    const nft = await axios({
-      method: 'post',
-      url: `/api/v1/snapback`,
-      data: {
-        ...item,
-        owner: address,
-      },
-    })
-    if(nft.data) {
-      // console.log(nft.data);
-      window.location.replace('/collected-nfts')
-      return;
+      const nft = await axios({
+        method: 'post',
+        url: `/api/v1/snapback`,
+        data: {
+          ...item,
+          owner: address,
+        },
+      })
+      if(nft.data) {
+        // console.log(nft.data);
+        window.location.replace('/collected-nfts')
+        return;
+      }
+    } catch (error) {
+      console.log(error.message);
+      let _msg = error.message.split(',"message":"').length > 1 && capitalizeFirstLetter(error.message.split(',"message":"')[1].split('","')[0]);
+      toast.error(_msg, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+      setWait(null)
     }
+
     // router.push('/')
   }
 
@@ -122,6 +144,7 @@ const MintNfts = () => {
           ))}
         </div>
       </div>
+      <ToastContainer />
       <InnerFooter />
     </>
   );

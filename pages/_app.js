@@ -6,6 +6,7 @@ import { ethers } from 'ethers'
 import Web3Modal from "web3modal"
 import axios from 'axios'
 import '../assets/css/style.css';
+import '../assets/css/ReactToastify.css';
 
 function Marketplace({ Component, pageProps }) {
   const [address, setAddress] = useState(null)

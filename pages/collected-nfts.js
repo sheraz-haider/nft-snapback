@@ -18,6 +18,8 @@ import Moralis from "moralis";
 import assets from '../assets/images';
 import BurnedNft from '../components/burnedNft/BurnedNft';
 
+import { ToastContainer, toast } from 'react-toastify';
+
 /* Moralis init code */
 const serverUrl = "https://z45j2piboebx.usemoralis.com:2053/server";
 const appId = "2vQqPUPlVqmKua5agETllLCJFLrbuAjqfJ2zH1zO";
@@ -95,6 +97,20 @@ const CollectedNfts = () => {
     const provider = new ethers.providers.Web3Provider(connection)
     const signer = provider.getSigner()
 
+    try {
+
+    } catch (error) {
+      console.log(error.message);
+      let _msg = error.message.split(',"message":"').length > 1 && capitalizeFirstLetter(error.message.split(',"message":"')[1].split('","')[0]);
+      toast.error(_msg, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
     /* next, create the item */
     let contract = new ethers.Contract(nftaddress, Snapback.abi, signer)
     let transaction = await contract.burnToken(item.id)
@@ -167,7 +183,7 @@ const CollectedNfts = () => {
           </div>
         </div>
       )}
-
+      <ToastContainer />
       <InnerFooter />
     </>
   );

@@ -4,8 +4,10 @@ pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract Snapback is ERC1155 {
+    using Counters for Counters.Counter;
 
     uint256 public tokenPrice;
     // address contractAddress;
@@ -13,10 +15,16 @@ contract Snapback is ERC1155 {
 
     string private constant IPFS_PREFIX = "https://ipfs.io/ipfs/";
 
+    uint256 public constant TOKENS_TYPE_CAP = 50;
+    uint256 public constant TOKENS_USER_CAP = 5;
+
     uint256 public constant AVASTARS = 1;
     uint256 public constant DRIPPERS = 2;
     uint256 public constant UNOFFICAL_PUNKS = 3;
     uint256 public constant COCAIN_COWBOY = 4;
+
+    mapping(uint256 => Counters.Counter) private _countByType;
+    mapping(address => mapping(uint256 => Counters.Counter)) private _countByUser;
 
     constructor(uint256 _tokenPrice) ERC1155(string(abi.encodePacked(IPFS_PREFIX, "QmPossjCcLxQsGrcGB9pvqKCXfoorbsyxp3iALQ5WiVvk6/{id}.json"))) {
         owner = msg.sender;
@@ -29,6 +37,14 @@ contract Snapback is ERC1155 {
             msg.value == tokenPrice,
             "Please submit asking price in order to complete the purchase"
         );
+        require(
+            _countByType[id].current() < TOKENS_TYPE_CAP,
+            "No tokens left"
+        );
+        require(
+            _countByUser[msg.sender][id].current() < TOKENS_USER_CAP,
+            "Tokens limit exceeded"
+        );
 
         // Pay price to owner
         payable(owner).transfer(msg.value);
@@ -36,11 +52,18 @@ contract Snapback is ERC1155 {
         // Mint NFT
         _mint(msg.sender, id, 1, "");
 
+        // Increment
+        _countByType[id].increment();
+        _countByUser[msg.sender][id].increment();
         // setApprovalForAll(contractAddress, true);
     }
 
     function burnToken(uint256 id) public {
         _burn(msg.sender, id, 1);
+
+        // Decrement
+        _countByType[id].decrement();
+        _countByUser[msg.sender][id].decrement();
     }
 
     function uri(uint256 id) public view virtual override returns (string memory) {
