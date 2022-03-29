@@ -29,6 +29,9 @@ let snapbackSchema = new mongoose.Schema({
   owner: { type: String, trim: true, required: 'Owner is required' },
   burnt: { type: Boolean, default: false },
   shippingAddress: { type: String, trim: true, default: '' },
+  shippingName: { type: String, trim: true, default: '' },
+  shippingEmail: { type: String, trim: true, default: '' },
+  shippingContactNo: { type: String, trim: true, default: '' },
   shippingStatus: { type: String, trim: true, default: 'PENDING' },
   createdAt: { type: Date, default: Date.now }
 });
@@ -146,9 +149,12 @@ export const Snapback = {
     snapbackObj.shippingStatus = shippingStatus;
     return snapbackObj.save();
   },
-  setShippingAddress: async (id, shippingAddress) => {
+  setShippingAddress: async (id, shippingAddress, shippingName, shippingEmail, shippingContactNo) => {
     let snapbackObj = await _Snapback.findById(id);
     snapbackObj.shippingAddress = shippingAddress;
+    snapbackObj.shippingName = shippingName;
+    snapbackObj.shippingEmail = shippingEmail;
+    snapbackObj.shippingContactNo = shippingContactNo;
     return snapbackObj.save();
   },
   setBurnt: async (id) => {

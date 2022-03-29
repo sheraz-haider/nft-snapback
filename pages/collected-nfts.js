@@ -165,16 +165,23 @@ const CollectedNfts = () => {
             <div className='collected_nfts_iner'>
               {nfts.map((item, itemIndex) => (
                 <div className='collected_nfts_cont' key={`item-${itemIndex}`}>
-                  <div className='collected_nfts_cont_img'>
-                    <a href='#'>
+                  <div className='collected_nfts_cont_img' style={{ overflow: "hidden" }}>
+                    <video controls={false} autoPlay={true} loop={true} muted={true} style={{ height: "100%"}}>
+                      <source
+                        src={item.video}
+                        type='video/mp4'
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                    {/* <a href='#'>
                       <img src={item.image} alt='' />
-                    </a>
+                    </a> */}
                   </div>
                   {/* <Link href='/owned-nfts'> */}
                     {item.burnt ? (
                       <span className='collected_nfts_cta claimed' style={{ cursor: "pointer" }} onClick={() => setUpdateShippingAddress(item)}>Shipping Details ({item.shippingStatus})</span>
                     ) : (
-                      <span className='collected_nfts_cta' style={{ cursor: "pointer" }} onClick={() => burnNft(item)}>Claim Physical</span>
+                      <span className='collected_nfts_cta' style={{ cursor: "pointer" }} onClick={() => confirm("By clicking ok, your NFT will get burned and a physical copy will be shipped to you.") ? burnNft(item) : ""}>Claim Physical</span>
                     )}
                   {/* </Link> */}
                 </div>

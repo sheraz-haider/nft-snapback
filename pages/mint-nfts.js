@@ -13,8 +13,9 @@ import axios from 'axios'
 import MintCollabItem from '../components/minCollabItem/MintCollabItem';
 
 import { ToastContainer, toast } from 'react-toastify';
+import { useRouter } from 'next/router'
 
-const nfts = [
+const __nfts = [
   {
     id: 1,
     name: "Avastars",
@@ -50,10 +51,15 @@ const MintNfts = () => {
   const [address, setAddress] = useState(null)
   const [wait, setWait] = useState(null)
   const [minting, setMinting] = useState(null);
+  const [nfts, setNfts] = useState([]);
+  const router = useRouter()
 
   useEffect(() => {
     if(!address)
       loadConnectedProfile()
+    else {
+      loadNFTs()
+    }
   }, [address])
 
   async function loadConnectedProfile() {
@@ -70,6 +76,22 @@ const MintNfts = () => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+
+  async function loadNFTs() {
+    try {
+      const __nfts = await axios({
+        method: 'get',
+        url: `/api/v1/snapback`,
+      })
+      if(__nfts.data) {
+        console.log(__nfts.data);
+        setNfts(__nfts.data)
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
 
   const mintToken = async (item) => {
     setWait('Minting token...')
@@ -100,7 +122,7 @@ const MintNfts = () => {
       })
       if(nft.data) {
         // console.log(nft.data);
-        window.location.replace('/collected-nfts')
+        router.push('/collected-nfts')
         return;
       }
     } catch (error) {
@@ -135,15 +157,18 @@ const MintNfts = () => {
       </div>
       <div className='mint_collabs'>
         <div className='wrapper'>
-          {nfts.map(item => (
+          {__nfts.map(item => (
             <MintCollabItem
               key={`nft-${item.id}`}
               img={item.image}
+              video={item.video}
               id={item.id}
               title={item.name}
               description={item.description}
               minting={minting}
               mint={() => mintToken(item)}
+              canMintMore={5 - nfts.filter(i => i.owner === address && i.id === item.id).length}
+              totalMinted={nfts.filter(i => i.id === item.id).length}
             />
           ))}
         </div>

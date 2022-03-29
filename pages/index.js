@@ -72,12 +72,11 @@ const Index = () => {
           <div className='hero_container_iner'>
             <div className='hero_container_cont'>
               <h2>
-                NFT snapback provides the highest quality and precision detailed
-                artwork of your favourite NFT into NFTsnapback
+              NFTsnapback makes the highest quality and detailed artwork off your favourite NFT into NFTsnapback
               </h2>
               <div className='hero_container_buttons'>
-                <Link href='/collected-nfts'>Claim Now</Link>
-                <a>Shop on Open Sea</a>
+                <a href='https://www.heyotetsuo.com/kongz-claim/'>Claim Now</a>
+                <a href='https://opensea.io/collection/nftsnapbacks'>Shop on Open Sea</a>
               </div>
             </div>
             <div className='hero_container_img'>
@@ -91,9 +90,6 @@ const Index = () => {
           <div className='after_hero_iner'>
             <a href='#'>
               <img src={assets.afterHeader1} alt='' />
-            </a>
-            <a href='#'>
-              <img src={assets.afterHeader2} alt='' />
             </a>
             <a href='#'>
               <img src={assets.afterHeader3} alt='' />
@@ -223,8 +219,15 @@ const Index = () => {
               <li key={index}>
                 <Link href='/mint-nfts'>
                   <a>
-                    <div className='nfts_projects_img'>
-                      <img src={nft.image} alt='' />
+                    <div className='nfts_projects_img' style={{ overflow: "hidden" }}>
+                    <video controls={false} autoPlay={true} loop={true} muted={true} style={{ height: "100%"}}>
+                      <source
+                        src={nft.video}
+                        type='video/mp4'
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                      {/* <img src={nft.image} alt='' /> */}
                     </div>
                     <span>{nft.name}</span>
                   </a>
@@ -255,14 +258,20 @@ const Index = () => {
         <div className='wrapper'>
           <h2>Minting Pass Coming Soon</h2>
           <div className='minting_pass_iner'>
-            <img src={assets.mintingPass} alt='' />
+            <div className='video-con'>
+              <img src={'/mint-pass.gif'} alt='' />
+
+              {/* <video autoplay loop muted playsInline>
+                <source src={'/mint-pass.mp4'} type="video/mp4" />
+              </video> */}
+            </div>
           </div>
         </div>
       </div>
       <div className='mint_pass'>
         <div className='wrapper'>
           <h3>
-            Minting PassAll Physical NFTsnapback's Will Come With Customised
+            Minting Pass: All Physical NFTsnapback's Will Come With Customised
             Packaging.
           </h3>
           <a href='#'>Shop Now</a>

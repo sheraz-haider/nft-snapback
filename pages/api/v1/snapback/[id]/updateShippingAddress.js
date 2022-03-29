@@ -19,7 +19,7 @@ export default async (req, res) => {
   }
 
   if(req.method === 'POST') {
-    const snapback = await Snapback.setShippingAddress(id, req.body.shippingAddress);
+    const snapback = await Snapback.setShippingAddress(id, req.body.shippingAddress, req.body.shippingName, req.body.shippingEmail, req.body.shippingContactNo);
     if(snapback)
       res.json(snapback)
     else

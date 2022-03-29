@@ -24,27 +24,29 @@ const ClaimNfts = () => {
       <div className='collected_nfts_main claim_nfts_page'>
         <div className='wrapper'>
           <div className='collected_nfts_iner'>
-            {nfts.map(nft => (
-              <div key={nft} className='collected_nfts_cont'>
-                <div className='collected_nfts_cont_img'>
-                  <a href='#'>
-                    <img src={assets.projectImg} alt='' />
-                  </a>
-                </div>
-                {nft === 'Claim offical collab' ? (
-                  <Link href='/mint-nfts'>
-                    <a href='#' className='collected_nfts_cta'>
-                      {nft}
-                    </a>
-                  </Link>
-                ) : (
-                  <a href='#' className='collected_nfts_cta' style={{ cursor: "default" }}>
-                    {nft}
-                  </a>
-                )}
-
+            <div className='collected_nfts_cont'>
+              <div className='collected_nfts_cont_img'>
+                <a href='#'>
+                  <img src={assets.projectImg} alt='' />
+                </a>
               </div>
-            ))}
+              <a href='https://www.heyotetsuo.com/kongz-claim/' className='collected_nfts_cta'>
+                {'Claim Cyberkong'}
+              </a>
+            </div>
+            <div className='collected_nfts_cont'>
+              <div className='collected_nfts_cont_img'>
+                <a href='#'>
+                  <img src={assets.projectImg} alt='' />
+                </a>
+              </div>
+              <Link href='/collected-nfts'>
+                <a href='#' className='collected_nfts_cta'>
+                  {'Claim offical collab'}
+                </a>
+              </Link>
+
+            </div>
             <div className='collected_nfts_cont'>
               <div className='collected_nfts_cont_img'>
                 <a href='#'>

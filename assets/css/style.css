@@ -527,6 +527,20 @@ body {
   display: inline-block;
   text-align: center;
 }
+.minting_pass_iner .video-con {
+  background: #000;
+  border-radius: 50px;
+}
+.mint-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 10px 0;
+  color: white;
+}
+.minting_pass_iner video {
+  height: 490px;
+}
 
 .mint_pass {
   width: 100%;

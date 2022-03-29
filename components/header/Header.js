@@ -54,13 +54,13 @@ const Header = () => {
                 <Link href='/'>Home</Link>
               </li>
               <li>
-                <Link href='/collected-nfts'>Collected NFTs</Link>
+                <Link href='/mint-nfts'>Mint NFTs</Link>
               </li>
               <li>
                 <Link href='/claim-nfts'>Claim NFTs</Link>
               </li>
               <li>
-                <Link href='/mint-nfts'>Mint NFTs</Link>
+                <Link href='/collected-nfts'>Collected NFTs</Link>
               </li>
             </ul>
             <span className='mob_menu_icon'></span>
@@ -68,18 +68,18 @@ const Header = () => {
           <div className='header_iner_right'>
             <ul className='header_social'>
               <li>
-                <a href='#'>
+                <a target={'_blank'} href='http://www.medium.com/@nftsnapback'>
                   <img src={assets.mediumIcon} alt='' />
                 </a>
               </li>
               <li>
-                <a href='#'>
+                <a target={'_blank'} href='https://www.instagram.com/nftsnapback'>
                   <img src={assets.instagram} alt='' />
                 </a>
               </li>
               <li>
-                <a href='#'>
-                  <img src={assets.facebook} alt='' />
+                <a target={'_blank'} href='https://www.twitter.com/nftsnapback'>
+                  <img src={assets.twitter} alt='' />
                 </a>
               </li>
             </ul>

@@ -45,6 +45,10 @@ contract Snapback is ERC1155 {
             _countByUser[msg.sender][id].current() < TOKENS_USER_CAP,
             "Tokens limit exceeded"
         );
+        require(
+            id < 5,
+            "Invalid ID"
+        );
 
         // Pay price to owner
         payable(owner).transfer(msg.value);
@@ -62,8 +66,8 @@ contract Snapback is ERC1155 {
         _burn(msg.sender, id, 1);
 
         // Decrement
-        _countByType[id].decrement();
-        _countByUser[msg.sender][id].decrement();
+        // _countByType[id].decrement();
+        // _countByUser[msg.sender][id].decrement();
     }
 
     function uri(uint256 id) public view virtual override returns (string memory) {
