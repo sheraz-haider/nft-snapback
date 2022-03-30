@@ -13,7 +13,7 @@ const mintingPass = require('./minitin_pass.png').default
 const team1 = require('./team_1.png').default
 const team2 = require('./team_2.png').default
 const charity1 = require('./charity_1.png').default
-const charity2 = require('./charity_2.png').default
+const charity2 = require('./charity_2.jpg').default
 const charity3 = require('./charity_3.png').default
 const teamPattern1 = require('./team_pattern_1.png').default
 const teamPattern2 = require('./team_pattern_2.png').default
@@ -32,6 +32,9 @@ const youtube = require('./youtube_icon.png').default
 const instagramHolo = require('./instagram_icon_iner.png').default
 const discord = require('./discord_icon.png').default
 const punk = require('./unofficial-punk.jpg').default
+const metaverse = require('./metaverse.jpg').default
+const physical = require('./physical.jpg').default
+const digital = require('./digital.jpg').default
 
 const assets = {
   headerImg: headerImg.src,
@@ -68,6 +71,9 @@ const assets = {
   instagramHolo: instagramHolo.src,
   discord: discord.src,
   punk: punk.src,
+  metaverse: metaverse.src,
+  physical: physical.src,
+  digital: digital.src,
 };
 
 export default assets;

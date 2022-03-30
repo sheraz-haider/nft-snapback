@@ -24,21 +24,29 @@ const ClaimNfts = () => {
       <div className='collected_nfts_main claim_nfts_page'>
         <div className='wrapper'>
           <div className='collected_nfts_iner'>
-            <div className='collected_nfts_cont'>
-              <div className='collected_nfts_cont_img'>
-                <a href='#'>
-                  <img src={assets.projectImg} alt='' />
-                </a>
+            <div className='collected_nfts_cont' style={{ width: "32%" }}>
+              <div className='collected_nfts_cont_img' style={{ overflow: "hidden" }}>
+                <video controls={false} autoPlay={true} loop={true} muted={true} style={{ height: "100%" }}>
+                  <source
+                    src={'/hero-banner.mp4'}
+                    type='video/mp4'
+                  />
+                  Your browser does not support the video tag.
+                </video>
               </div>
               <a href='https://www.heyotetsuo.com/kongz-claim/' className='collected_nfts_cta'>
                 {'Claim Cyberkong'}
               </a>
             </div>
-            <div className='collected_nfts_cont'>
-              <div className='collected_nfts_cont_img'>
-                <a href='#'>
-                  <img src={assets.projectImg} alt='' />
-                </a>
+            <div className='collected_nfts_cont' style={{ width: "32%" }}>
+              <div className='collected_nfts_cont_img' style={{ overflow: "hidden" }}>
+                <video controls={false} autoPlay={true} loop={true} muted={true} style={{ height: "100%" }}>
+                  <source
+                    src={'https://bafybeibae5mmqj2j63tyjqbn3dpwrx34og6mccngo4cwvm2swxeyrvkdre.ipfs.infura-ipfs.io/'}
+                    type='video/mp4'
+                  />
+                  Your browser does not support the video tag.
+                </video>
               </div>
               <Link href='/collected-nfts'>
                 <a href='#' className='collected_nfts_cta'>
@@ -47,7 +55,7 @@ const ClaimNfts = () => {
               </Link>
 
             </div>
-            <div className='collected_nfts_cont'>
+            <div className='collected_nfts_cont' style={{ width: "32%" }}>
               <div className='collected_nfts_cont_img'>
                 <a href='#'>
                   <img src={assets.projectImg} alt='' />

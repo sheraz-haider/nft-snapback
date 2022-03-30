@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 
 const BurnedNfts = () => {
   const [nfts, setNfts] = useState([])
+  const [filter, setFilter] = useState("all");
 
   useEffect(() => {
     loadNFTs()
@@ -35,6 +36,8 @@ const BurnedNfts = () => {
 
   }
 
+  let filteredNfts = filter === "all" ? nfts : nfts.filter(n => n.shippingStatus === filter)
+
   return (
     <>
       <Header />
@@ -42,14 +45,19 @@ const BurnedNfts = () => {
         <div className='wraper'>
           <h1>Burned NFTs</h1>
           <p>
-            Lorem ipsum dolor sit amet,
-            <br /> consectetur adipiscing elit.
+            <br />
+            <br />
+            <button className={`burned-filter-btn ${filter === "all" ? "active" : ""}`} onClick={() => setFilter("all")}>All</button>
+            <button className={`burned-filter-btn ${filter === "PENDING" ? "active" : ""}`} onClick={() => setFilter("PENDING")}>Pending</button>
+            <button className={`burned-filter-btn ${filter === "PROCESSING" ? "active" : ""}`} onClick={() => setFilter("PROCESSING")}>Processing</button>
+            <button className={`burned-filter-btn ${filter === "SHIPPED" ? "active" : ""}`} onClick={() => setFilter("SHIPPED")}>Shipped</button>
+            <button className={`burned-filter-btn ${filter === "DELIVERED" ? "active" : ""}`} onClick={() => setFilter("DELIVERED")}>Delivered</button>
           </p>
         </div>
       </div>
       <div className='mint_collabs'>
         <div className='wrapper'>
-          {nfts.map(item => (
+          {filteredNfts.map(item => (
             <BurnedNft
               key={`item-${item._id}`}
               title={`O.G.C || ${item.name.toUpperCase()} Series 1`}

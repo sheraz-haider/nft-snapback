@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='footer_main'>
       <div className='wrapper'>
         <a href='#' className='footer_logo'>
-          <img src={assets.footerLogo} alt='' />
+          <img src={'/NFTsnapback-big-logo.png'} alt='' style={{ width: "400px" }} />
         </a>
         <div className='footer_details'>
           <p>
@@ -30,17 +30,17 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href='#'>
+            <a href='http://www.medium.com/@nftsnapback'>
               <img src={assets.mediumIcon} alt='' />
             </a>
           </li>
           <li>
-            <a href='#'>
+            <a href='https://www.instagram.com/nftsnapback'>
               <img src={assets.instagram} alt='' />
             </a>
           </li>
           <li>
-            <a href='#'>
+            <a href='https://www.twitter.com/nftsnapback'>
               <img src={assets.twitter} alt='' />
             </a>
           </li>

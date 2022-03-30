@@ -7,6 +7,15 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+@font-face {
+	font-family: 'Superion';
+	src:
+    url('./font/Superion.otf')
+    format('opentype');
+}
+.superion-font {
+  font-family: "Superion" !important;
+}
 img {
   max-width: 100%;
 }
@@ -705,7 +714,7 @@ body {
 .team_list li {
   width: 390px;
   max-width: 48%;
-  margin: 0 50px 30px;
+  margin: 0 10px 30px;
 }
 .team_img {
   position: relative;
@@ -1033,7 +1042,7 @@ body {
 .footer_details p {
   font-weight: 400;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 25px;
   text-align: center;
   color: #ffffff;
@@ -1706,6 +1715,27 @@ body.toggle {
 }
 .burned_nft_btn input:hover,
 .burned_nft_btn button:hover {
+  background: none;
+  color: #fad505;
+}
+
+.burned-filter-btn {
+  font-weight: 700;
+  width: fit-content;
+  display: inline-block;
+  background: #fad505;
+  border: 2px solid #fad505;
+  border-radius: 2px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 18px;
+  color: #0f3ec2;
+  padding: 0 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.burned-filter-btn.active {
   background: none;
   color: #fad505;
 }
