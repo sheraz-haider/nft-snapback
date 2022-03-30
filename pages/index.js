@@ -86,7 +86,7 @@ const Index = () => {
               </h2>
               <div className='hero_container_buttons'>
                 <a href='https://www.heyotetsuo.com/kongz-claim/'>Claim Now</a>
-                <a href='https://opensea.io/collection/nftsnapbacks'>Shop on Opensea</a>
+                <a href='https://opensea.io/collection/nftsnapbacks'>Opensea</a>
               </div>
             </div>
             <div className='hero_container_img' style={{ overflow: "hidden", padding: "0 0 0 50px" }}>
