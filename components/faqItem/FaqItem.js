@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-const FaqItem = () => {
+const FaqItem = ({ question, answer }) => {
   const detailsRef = useRef(null);
   const h4Ref = useRef(null);
 
@@ -12,18 +12,10 @@ const FaqItem = () => {
   return (
     <div className='faq_cont'>
       <h4 ref={h4Ref} onClick={handleToggleDetails}>
-        Lorem ipsum ipsum?
+        {question}
       </h4>
       <div ref={detailsRef} className='faq_details '>
-        <p>
-          There are great tutorials that you can find and watch online via
-          Youtube.
-        </p>
-
-        <p>
-          We have a link provided by EddieIsKong on his YouTube channel and can
-          talk you through the steps, on how to use Polygon Matic Network.
-        </p>
+        {answer}
       </div>
     </div>
   );

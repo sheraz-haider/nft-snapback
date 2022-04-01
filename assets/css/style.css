@@ -1473,7 +1473,7 @@ body.toggle {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(15, 62, 194, 0.87);
+  background: rgb(15 62 194 / 55%);
   backdrop-filter: blur(4px);
   flex-wrap: wrap;
   height: 100%;
@@ -1481,7 +1481,7 @@ body.toggle {
 }
 .claim_hover p {
   font-weight: 700;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 17px;
   width: 100%;
   margin-top: 15px;
@@ -1770,6 +1770,15 @@ body.toggle {
 }
 .mob_menu_icon:before {
   top: 0;
+}
+
+.nfts_artwork_samples p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 1200px) {

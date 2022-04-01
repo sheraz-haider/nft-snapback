@@ -43,7 +43,7 @@ const BurnedNfts = () => {
       <Header />
       <div className='inner_hero'>
         <div className='wraper'>
-          <h1>Burned NFTs</h1>
+          <h1 className='superion-font'>Burned NFTs</h1>
           <p>
             <br />
             <br />

@@ -140,10 +140,11 @@ const CollectedNfts = () => {
       <Header />
       <div className='inner_hero'>
         <div className='wraper'>
-          <h1>Collected NFTs</h1>
+          <h1 className='superion-font'>Collected NFTs</h1>
           <p>
-            Lorem ipsum dolor sit amet,
-            <br /> consectetur adipiscing elit.
+          Here you will be able to view all the NFT’s you have collected With NFTsnapback.
+          <br />
+          From here you will be able to fill out your details, get updates of your physical item from the NFTsnapback team.
           </p>
         </div>
       </div>

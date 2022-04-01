@@ -148,10 +148,9 @@ const MintNfts = () => {
       <Header />
       <div className='inner_hero'>
         <div className='wraper'>
-          <h1>NFTsnapback Official Collab</h1>
+          <h1 className='superion-font'>NFTsnapback Official Collab</h1>
           <p>
-            Lorem ipsum dolor sit amet,
-            <br /> consectetur adipiscing elit.
+          Official Collaboration & Partnership from some of the leading project to influential People in this space.
           </p>
         </div>
       </div>

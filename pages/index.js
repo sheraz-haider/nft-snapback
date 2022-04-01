@@ -121,6 +121,8 @@ const Index = () => {
         </div>
       </div>
       <div className='video_cont'>
+        <h2 className="superion-font" style={{fontStyle: 'normal', marginBottom: '12px', fontWeight: 700, fontSize: '40px', lineHeight: '56px', textAlign: 'center', color: '#ffffff'}}>Customer Journey</h2>
+
         <div className='wrapper'>
           <div className='collected_nfts_iner'>
             <div className='collected_nfts_cont' style={{ width: "32%", background: "none", marginBottom: "0", boxShadow: "none" }}>
@@ -154,53 +156,67 @@ const Index = () => {
         <div className='wrapper'>
           <div className='journey_sofar_iner'>
             <div className='journey_sofar_top'>
-              <h2 className='superion-font'>Journey So Far</h2>
+              <h2 className='superion-font'>NFTsnapback Journey So Far..</h2>
               <p>
-              NFT Snapback has been growing and creating a physical merchandise organically and now we are finally at a juncture that we can provide superb quality and service to our community.
+              NFTsnapback has been building in the background and we are finally at a junction to provide the best quality Merchandise to the #NFTcommunity.
               </p>
             </div>
             <ul className='journey_sofar_list'>
               <li>
-                <h3>How It Started</h3>
+                <h3>How It Started:</h3>
                 <p>
-                The idea of NFT Snapback came from my journey into NFT’s and being part of the Cyberkongz community. This was August 2021 when we first decided to create a Cyberkongz Snapback as a gesture of appreciation for the Cyberkongz community and NFT community as a whole. We wanted to create something people can be proud of. We want to be where tech meets fashion and we’re on course for all and more.
+                As mention through many medium posts the idea of NFTsnapback came from while being part of the Cyberkong discord. Discussing Kongz merchandise early summer 2021, I wanted to created Snapback for the community. From there the idea kicked off to create not just snapback but infuse the passion and love I found in NFT and combine the two. Here is where fashion meets tech, so from Early August 2021 NFTsnapback was created.
                 </p>
               </li>
               <li>
                 <h3>Genesis Launch:</h3>
                 <p>
-                We launched our first project, Cyberkongz #327 Genesis Dr Bling Kong a total supply of 275 were made and this was an incredible moment for NFT Snapback. We chose to launch with a CyberKongz NFT because this was the first community that inspired the inception of NFT Snapback, so wanted to show our appreciation.
+                There was 275 Genesis O.G.C || KONGZ NFTsnapback that was created for the cyberkongz community and Ladz City community. These NFT at the time was all airdropped using a Snapshot of cyberkongz holders at the time, through the smart contract. As months went by we sourced the finest quality hats, production company and created the best premium quality NFTsnapback for the community using Cyberkong #327 AKA DR Bling Kong.
                 </p>
               </li>
               <li>
                 <h3>Claim Success:</h3>
                 <p>
-                We distributed the first NFT backed by physical Snapback. This proof of concept has been nothing short of a success. The community feedback and enthusiasm was the single greatest thing that happened from this launch and we’re extremely appreciative and humbled by it.
+                Finally the day came when the NFT holders were able to claim their NFTsnapback. A great success and achievement where NFTsnapback distributed the 1st NFT the was back by a physical SNAPBACK. This proof of concept was amazing to see and the community has been appreciative and amazed on the quality Merchandise they had received. Now we have built out our own platform using our own Smart Contract that will make creating and claiming Physical Assets easy for all our customers.
                 </p>
               </li>
               <li>
                 <h3>Phase 2 Launch:</h3>
                 <p>
-                Having launched our Genesis O.G collection with resounding success our Phase 2 was collaboration with 4 projects/influencers in the NFT space they’re Rizzle Pre co-founder of Avastars & NFT42, Cloudewhite influencer and founder of $COKE Axie Infinity, Eric founder of Unofficial Punks the man who started the whole derivatives of the Cryptopunk movement and Florian Tappeser a Movie industry veteran who worked on How to train your dragon and Hotel Transylvania, He also has his own brand Drippieverse. NFT Snapback is proud to be working with incredibly talented and knowledgeable individuals and groups.
+                With the success of the the Genesis Community Cyberkongz NFTsnapback launch we have partnered up with 4 projects/Influencer’s in the NFT space. Avastars collection using an NFT of a previous co-founder @NFT42, Cloudwhite Influencer in the NFT space and the Founder of $COKE Axie Infinity, Eric Founder of Unofficial Punks the man that stared the whole derivatives of the Cryptopunk movement and Florian Tappeser, a movie industry veteran who worked on many acclaimed animation hits like Hotel Transylvania and How To Train Your Dragon & has his on brand in Drippieverse™ and work with some of the biggest companies in the space such as Genies. NFTsnapback are proud to be working with some of the most incredible people and communities in this space. NFTsnapback will be able to work with any projects or Influencer's that wish to create a Series Collection with us.
                 </p>
               </li>
               <li>
-                <h3>Future Collaboration:</h3>
+                <h3>Minting Pass:</h3>
                 <p>
-                We’re always striving to find the next NFT project that we can work with that push’s NFT Snapback forward and finding incredibly talented individuals that we can innovate together. There are a few projects and artists that we’re currently talking with to see how we can make our plan come to life.
+                We are delighted to share with you shortly after the successful launch of our Collaboration Series, we will be launching our very 1st Mint Pass. There will be 100 Mint Pass that will enable you to create a custom 1 of 1 of your Favourite NFT. This is something we want to strive and be able to deliver to the wider community and we're excited that this soon going to be possible. Stay tuned as we will be announcing via our socials when and how you will be able to obtain a NFTsnapback Mint Pass.
                 </p>
               </li>
             </ul>
+            <div className='minting_pass' style={{ marginBottom: "20px", paddingTop: "0" }}>
+              <div className='wrapper'>
+                {/* <h2 className='superion-font'>Minting Pass Coming Soon</h2> */}
+                <div className='minting_pass_iner'>
+                  <div className='video-con'>
+                    <img src={'/mint-pass.gif'} alt='' />
+
+                    {/* <video autoplay loop muted playsInline>
+                      <source src={'/mint-pass.mp4'} type="video/mp4" />
+                    </video> */}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
       <div className='nfts_projects'>
         <div className='wrapper'>
           <div className='nfts_projects_top'>
             <h2 className='superion-font'>Official Collab</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur
-              <br /> adipiscing elit.
+              Official Collaboration & Partnership from some of the leading project to influential People in this space.
             </p>
           </div>
           <ul className='nfts_projects_list'>
@@ -226,9 +242,13 @@ const Index = () => {
           </ul>
         </div>
       </div>
-      <div className='coming_soon'>
+      <div className='coming_soon nfts_artwork_samples'>
         <div className='wrapper'>
-          <h2 className='superion-font'>Coming Soon</h2>
+          <h2 className='superion-font'>NFTsnapback Artwork Samples</h2>
+          <p>
+          Through building & testing here are some of the most recognised NFT collections that we test sampled to push our production capabilities to the max. 
+          </p>
+          <br />
           <ul className='coming_soon_list'>
             <li>
               <img src={assets.comingSoon1} alt='' />
@@ -243,20 +263,7 @@ const Index = () => {
           </ul>
         </div>
       </div>
-      <div className='minting_pass'>
-        <div className='wrapper'>
-          <h2 className='superion-font'>Minting Pass Coming Soon</h2>
-          <div className='minting_pass_iner'>
-            <div className='video-con'>
-              <img src={'/mint-pass.gif'} alt='' />
 
-              {/* <video autoplay loop muted playsInline>
-                <source src={'/mint-pass.mp4'} type="video/mp4" />
-              </video> */}
-            </div>
-          </div>
-        </div>
-      </div>
       <div className='mint_pass'>
         <div className='wrapper'>
           <h3 className='superion-font'>
@@ -287,12 +294,14 @@ const Index = () => {
                 <img src={assets.nuyIcon} alt='' />
               </div>
               <h3>Buy NFTsnapback NFT</h3>
-              <p>
-                The Current NFTsnapback that you can buy is the O.G.C || KONGZ
-                Edition. The NFT can be bought using ETH on the Polygon Matic
-                Network. If you are not familiar with this please watch a video
-                by EddieIsKong from his youtube channel. Head to 17.27 on the
-                timer to be shown how to claim.
+              <p style={{ textAlign: "left" }}>
+                To be able to buy our NFTs there will be two ways. 
+                <br />
+                <br />
+                1. When ever we announce a collaboration or when a new series of Mint pass are available these will be able to be bought through our minting page. Make sure you keep upto date when ever we have an Minting Event.
+                <br />
+                <br />
+                2. If you missed out on the minting, then have a look at Opensea, Look Rare and see if there are any NFTsnapback available on the open market.
               </p>
             </li>
             <li>
@@ -300,14 +309,8 @@ const Index = () => {
                 <img src={assets.emailOpenIcon} alt='' />
               </div>
               <h3>Claim Physical NFTsnapback</h3>
-              <p>
-                Once you have claimed the Physical NFTsnapback through our claim
-                page, we will be notified and prepare your order to be shipped
-                out. Once the order has be shipped you will receive a email
-                confirmation with all the details regarding you NFTsnapback. We
-                ship worldwide and if there is any issues regarding issues with
-                address we will be in contact to confirm details before any
-                shipment is sent out.
+              <p style={{ textAlign: "left" }}>
+              To claim the physical Item all the new collections will require you to burn your NFT (Series 1 Kongz Will not be burnable).  Upon Burning your NFT you will be required to fill out your shipping details. Once we receive your information your NFT will be updated and inform you of the status of your Physical item.
               </p>
             </li>
             <li>
@@ -315,10 +318,8 @@ const Index = () => {
                 <img src={assets.giftIcon} alt='' />
               </div>
               <h3>Receive Metaveres NFTsnapback</h3>
-              <p>
-                Once you have claimed your NFTsnapback Physical hat you will
-                shortly receive an Official Sandbox Assets from the NFTsnapback
-                Opensea Account.
+              <p style={{ textAlign: "left" }}>
+              We have now created a Decentraland wearable for all customers that claim their physical NFTsnapback. This wearable item will be airdropped and there is no additional steps the customer has to take. Now you can have your NFTsnapback as a physical and metaverse Wearable for your Avatar. We believe this is the future and we're exciting to bring this to you.
               </p>
             </li>
           </ul>
@@ -395,8 +396,47 @@ const Index = () => {
             <p>Wanna Ask Something?</p>
           </div>
           <div className='faq_iner'>
-            {Array.from({ length: 5 }, (_, i) => i).map(item => (
-              <FaqItem />
+            {[
+              {
+                question: `How do I use Matic Network to buy or claim Series 1 O.G.C || Kongz?`,
+                answer: [
+                  <p>There are great tutorials that you can find and watch online via Youtube.</p>,
+                  <p>We have a link provided by EddieIsKong on his YouTube channel and can talk you through the steps, on how to use Polygon Matic Network.</p>,
+                  <p><a href="https://www.youtube.com/watch?v=xUTYW8uWzIE" target={'_blank'} style={{ color: "#fff", textDecoration: "underline" }}>https://www.youtube.com/watch?v=xUTYW8uWzIE</a></p>,
+                ]
+              },
+              {
+                question: `How Do I know If the NFT Is Claimed Or Not?`,
+                answer: [
+                  <p>For the Series 1 O.G.C.|| KONGZ, we have created a tool on our claiming page to see if the NFT has been claimed or not. Please do check before you consider buying to claim.</p>,
+                  <p>Use the Token I.D from the NFT you want to check on the Opensea Store and input the information on the claiming page. You will be able to find out if the NFT has been used or not.</p>,
+                  <p>On the Newer collection to come out, all claimed NFT's will be burned and only unclaimed NFT's will be on the open market, leaving less issues and concerns if you wish to buy one.</p>,
+                ]
+              },
+              {
+                question: `What if my order goes missing or damaged upon receiving the goods?`,
+                answer: [
+                  <p>We send all order via track and signed and signing is required upon receiving the package.</p>,
+                  <p>If you see the package damaged in any way please don’t sign and inform them its damaged and insurance will be able to cover this and work on sending a replacement as soon as possible.</p>,
+                  <p>In regards to missing orders we will investigate as to see what occurred and be in direct communication to resolve it as best as possible.</p>,
+                ]
+              },
+              {
+                question: `Can I create my own 1-1 NFTsnapback?`,
+                answer: [
+                  <p>This is something we are starving on to bring to the community and soon this will be possible.</p>,
+                  <p>Our Minting pass will enable this service for custom creation. Very soon announcement will be made on how to obtain it.</p>,
+                ]
+              },
+              {
+                question: `What if I want to create NFTsnapback for my project or community?`,
+                answer: [
+                  <p>That is great we are happy to work with projects or influencers and proved NFTsnapback Merchandise.</p>,
+                  <p>Reach out via email and we will get back to you as soon as possible.</p>,
+                ]
+              },
+            ].map(faq => (
+              <FaqItem question={faq.question} answer={faq.answer} />
             ))}
           </div>
         </div>

@@ -47,7 +47,7 @@ const Header = () => {
         <div className='header_iner'>
           <div className='header_iner_left'>
             <a href='#' className='logo_main'>
-              <img src={assets.logo} alt='' />
+              <img src={assets.logo} alt='' style={{ height: "70px" }} />
             </a>
             <ul className='main_menu'>
               <li>

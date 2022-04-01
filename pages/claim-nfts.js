@@ -14,10 +14,11 @@ const ClaimNfts = () => {
       <Header />
       <div className='inner_hero'>
         <div className='wraper'>
-          <h1>Claim NFTs</h1>
+          <h1 className='superion-font'>Claim NFTs</h1>
           <p>
-            Lorem ipsum dolor sit amet,
-            <br /> consectetur adipiscing elit.
+            Here you will be able to claim youe physical NFT Merchandise.
+            <br />
+            Please select below which NFTsnapaback collection you wish to claim.
           </p>
         </div>
       </div>
@@ -56,9 +57,9 @@ const ClaimNfts = () => {
 
             </div>
             <div className='collected_nfts_cont' style={{ width: "32%" }}>
-              <div className='collected_nfts_cont_img'>
+              <div className='collected_nfts_cont_img' style={{ overflow: "hidden" }}>
                 <a href='#'>
-                  <img src={assets.projectImg} alt='' />
+                  <img src={'/mint-pass.gif'} alt=''style={{ height: "100%" }} />
                 </a>
                 <div className='claim_hover'>
                   <img src='assets/images/question.png' alt='' />

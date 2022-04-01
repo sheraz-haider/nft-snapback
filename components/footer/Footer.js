@@ -20,7 +20,7 @@ const Footer = () => {
             <br /> created please contact us
           </p>
         </div>
-        <a href='#' className='footer_cta'>
+        <a href='mailto:info@NFTsnapback.com' className='footer_cta'>
           Contact Us
         </a>
         <ul className='footer_social'>
