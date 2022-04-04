@@ -301,9 +301,17 @@ const Index = () => {
           <div className='nfst_medium_iner'>
             <h3 className='superion-font'>O.G.C || NFTsnapback Social Posts</h3>
             <p>Stay updated and informed on when the latest drops and update on O.G.C || NFTsnapbackt.</p>
-            <a href='http://www.medium.com/@nftsnapback'>
+            <a href='http://www.medium.com/@nftsnapback' style={{ marginLeft: "50px", float: "left"}}>
               Read on Medium
               <img src={assets.mediumIcon} alt='' />
+            </a>
+            <a href='https://www.instagram.com/nftsnapback'>
+              Read on Instagram
+              <img src={assets.instagram} alt='' />
+            </a>
+            <a href='https://www.twitter.com/nftsnapback' style={{ marginRight: "50px", float: "right"}}>
+              Read on Twitter
+              <img src={assets.twitter} alt='' />
             </a>
           </div>
         </div>
