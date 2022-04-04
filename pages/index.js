@@ -281,8 +281,8 @@ const Index = () => {
               <img src={assets.comingSoon3} alt='' />
             </li>
             <li>
-              <div className='comingSoon-bg' style={{background: `url("${assets.comingSoon5}")`, backgroundSize: 'cover', backgroundPosition: 'center', width: "282px", height: "312px", marginBottom: "20px", borderRadius: "50px", marginTop: "-30px" }} alt='' />
-              <div className='comingSoon-bg' style={{background: `url("${assets.comingSoon6}")`, backgroundSize: 'cover', backgroundPosition: 'center', width: "282px", height: "312px", borderRadius: "50px" }} alt='' />
+              <div className='comingSoon-bg' style={{background: `url("${assets.comingSoon5}")`, backgroundSize: 'cover', backgroundPosition: 'center', width: "380px", height: "312px", marginBottom: "20px", borderRadius: "30px", marginTop: "-30px" }} alt='' />
+              <div className='comingSoon-bg' style={{background: `url("${assets.comingSoon6}")`, backgroundSize: 'cover', backgroundPosition: 'center', width: "380px", height: "312px", borderRadius: "30px" }} alt='' />
             </li>
           </ul>
         </div>
