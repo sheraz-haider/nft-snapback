@@ -62,7 +62,7 @@ const team = [
   {
     background: assets.teamPattern1,
     profile: assets.team3,
-    title: 'Zany smith',
+    title: 'Gadawe.Eth',
     designation: 'Head of Operations & logistics',
     description: <p>Been working in Operations & logistics for over 10years. I have been heading and managing effective solutions for the delivery industry.Significant experience working in warehousing and delivery companies that facilitate large scale logistical operations</p>,
   },
