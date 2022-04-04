@@ -11,13 +11,7 @@ const Footer = () => {
         </a>
         <div className='footer_details'>
           <p>
-            If you are a project or an Influencer we are happy to work with
-            anyone.
-          </p>
-
-          <p>
-            To enquire to work with NFTsnapback and have your own NFTsnapback
-            <br /> created please contact us
+          To enquire to work with O.G.C || NFTsnapback please don’t hesitate to contact us. NFTsnapbacks aims to be the number 1 snapback brand that aim to bring physical fashion, style andl merge with your NFTs.
           </p>
         </div>
         <a href='mailto:info@NFTsnapback.com' className='footer_cta'>

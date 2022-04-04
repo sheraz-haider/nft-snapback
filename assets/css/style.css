@@ -372,7 +372,7 @@ body {
   width: 100%;
   display: inline-block;
 }
-.journey_sofar_list li {
+.journey_sofar_list > li {
   width: 100%;
   display: inline-block;
   padding-left: 130px;
@@ -380,17 +380,17 @@ body {
   margin-bottom: 50px;
   counter-increment: list-number;
 }
-.journey_sofar_list li h3 {
+.journey_sofar_list > li h3 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 30px;
   line-height: 42px;
   color: #ffffff;
 }
-.journey_sofar_list li p {
+.journey_sofar_list > li p {
   line-height: 43px;
 }
-.journey_sofar_list li:before {
+.journey_sofar_list > li:before {
   position: absolute;
   content: '';
   width: 90px;
@@ -400,7 +400,7 @@ body {
   top: 0;
   background: #fad505;
 }
-.journey_sofar_list li:after {
+.journey_sofar_list > li:after {
   position: absolute;
   top: 45px;
   left: 45px;
@@ -1965,14 +1965,14 @@ body.toggle {
   .video_cont_iner video {
     height: 450px;
   }
-  .journey_sofar_list li {
+  .journey_sofar_list > li {
     padding: 120px 0 0 0;
   }
-  .journey_sofar_list li:before,
-  .journey_sofar_list li:after {
+  .journey_sofar_list > li:before,
+  .journey_sofar_list > li:after {
     left: 50%;
   }
-  .journey_sofar_list li:before {
+  .journey_sofar_list > li:before {
     margin-left: -45px;
   }
   .how_it_works_list,
@@ -2151,7 +2151,7 @@ body.toggle {
     padding-top: 50px;
   }
   .journey_sofar_iner p,
-  .journey_sofar_list li p,
+  .journey_sofar_list > li p,
   .nfts_projects_top p {
     font-size: 16px;
     line-height: 25px;
@@ -2159,18 +2159,18 @@ body.toggle {
   .journey_sofar_top {
     margin-bottom: 40px;
   }
-  .journey_sofar_list li {
+  .journey_sofar_list > li {
     padding-top: 80px;
   }
-  .journey_sofar_list li:before {
+  .journey_sofar_list > li:before {
     width: 70px;
     height: 70px;
     margin-left: -35px;
   }
-  .journey_sofar_list li:after {
+  .journey_sofar_list > li:after {
     top: 35px;
   }
-  .journey_sofar_list li h3,
+  .journey_sofar_list > li h3,
   .nfst_medium_iner h3 {
     font-size: 25px;
     line-height: 40px;

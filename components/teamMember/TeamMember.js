@@ -2,7 +2,7 @@ import React from 'react';
 
 import assets from '../../assets/images';
 
-const TeamMember = ({ background, profile, title }) => {
+const TeamMember = ({ background, profile, title, description, designation }) => {
   return (
     <>
       <div className='team_img'>
@@ -13,13 +13,9 @@ const TeamMember = ({ background, profile, title }) => {
       </div>
       <div className='team_detail'>
         <h4>{title}</h4>
-        <p>
-          Founder of NFTsnapback. Passion for NFT and fashion and bring this
-          service to everyone in the community. Keen interest in being part of
-          the development of this space and will use all my experience to
-          provide excellence in this space.
-        </p>
-        <a href='#'>
+        <p>{designation}</p>
+        {description}
+        <a target={"_blank"} href={`https://twitter.com/${title}`}>
           <img src={assets.twitter} alt='' />
           Follow
         </a>

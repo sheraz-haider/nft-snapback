@@ -9,9 +9,13 @@ const comingSoon1 = require('./comming_soon.png').default
 const comingSoon2 = require('./comming_soon_2.png').default
 const comingSoon3 = require('./comming_soon_3.png').default
 const comingSoon4 = require('./comming_soon_4.png').default
+const comingSoon5 = require('./comingSoon5.png').default
+const comingSoon6 = require('./comingSoon6.png').default
 const mintingPass = require('./minitin_pass.png').default
 const team1 = require('./team_1.png').default
 const team2 = require('./team_2.png').default
+const team3 = require('./team3.jpg').default
+const team4 = require('./team4.jpg').default
 const charity1 = require('./charity_1.png').default
 const charity2 = require('./charity_2.jpg').default
 const charity3 = require('./charity_3.png').default
@@ -48,9 +52,13 @@ const assets = {
   comingSoon2: comingSoon2.src,
   comingSoon3: comingSoon3.src,
   comingSoon4: comingSoon4.src,
+  comingSoon5: comingSoon5.src,
+  comingSoon6: comingSoon6.src,
   mintingPass: mintingPass.src,
   team1: team1.src,
   team2: team2.src,
+  team3: team3.src,
+  team4: team4.src,
   charity1: charity1.src,
   charity2: charity2.src,
   charity3: charity3.src,
