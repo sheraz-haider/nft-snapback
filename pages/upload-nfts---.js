@@ -257,3 +257,9 @@
 // };
 
 // export default UploadNfts;
+
+
+
+export default () => {
+  return (<></>)
+}
