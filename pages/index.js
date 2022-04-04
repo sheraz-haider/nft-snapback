@@ -198,10 +198,10 @@ const Index = () => {
                 <p>
                 Introducing:
                 <ul style={{ marginLeft: "50px" }}>
-                  <li>Avastars: Using an NFT of a previous co-founder @NFT42. (100% proceeds go to charity)</li>
-                  <li>Cloudwhite, an Influencer in the NFT space and the Founder of $COKE Axie Infinity.</li>
-                  <li>Eric P. Rhodes, Founder of Unofficial Punks the man that stared the whole derivatives of the Cryptopunk movement.</li>
-                  <li>Florian Tappeser, a movie industry veteran who worked on many acclaimed animation hits like Hotel Transylvania and How To Train Your Dragon & has his on brand in Drippieverse™ and work with some of the biggest companies in the space such as Genies.</li>
+                  <li><p>Avastars: Using an NFT of a previous co-founder @NFT42. (100% proceeds go to charity)</p></li>
+                  <li><p>Cloudwhite, an Influencer in the NFT space and the Founder of $COKE Axie Infinity.</p></li>
+                  <li><p>Eric P. Rhodes, Founder of Unofficial Punks the man that stared the whole derivatives of the Cryptopunk movement.</p></li>
+                  <li><p>Florian Tappeser, a movie industry veteran who worked on many acclaimed animation hits like Hotel Transylvania and How To Train Your Dragon & has his on brand in Drippieverse™ and work with some of the biggest companies in the space such as Genies.</p></li>
                 </ul>
                 </p>
                 <br />
