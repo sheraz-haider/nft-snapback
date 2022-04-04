@@ -30,7 +30,6 @@ const InnerFooter = () => {
           </div>
           <div className='inner_footer_about'>
             <h3>Contact</h3>
-            <p>+012 3456789</p>
             <a href='mailto:Info@NFTsnapback.com'>Info@NFTsnapback.com</a>
             <ul className='inner_footer_social'>
               <li>

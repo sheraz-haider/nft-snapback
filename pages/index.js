@@ -237,7 +237,7 @@ const Index = () => {
       <div className='nfts_projects'>
         <div className='wrapper'>
           <div className='nfts_projects_top'>
-            <h2 className='superion-font'>Official Collab</h2>
+            <h2 className='superion-font'>Official O.G.C || NFTsnapback Collab</h2>
             <p>
               Official Collaboration & Partnership from some of the leading project to influential People in this space.
             </p>
@@ -369,9 +369,9 @@ const Index = () => {
       <div className='nft_charity'>
         <div className='wrapper'>
           <div className='nft_charity_top'>
-            <h2 className='superion-font'>NFTsnapback Charity Programme</h2>
+            <h2 className='superion-font'>O.G.C || NFTsnapback Charity Programme</h2>
             <p>
-              See what we are doing with our profits from sales and royalties.
+            Giving back is a key part of O.G.C || NFTsnapback business ethos.
             </p>
           </div>
           <div className='nft_charity_iner'>

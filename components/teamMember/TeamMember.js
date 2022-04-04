@@ -11,14 +11,14 @@ const TeamMember = ({ background, profile, title, description, designation }) =>
           <img src={profile} alt='' />
         </span>
       </div>
-      <div className='team_detail'>
+      <div className='team_detail' style={{ minHeight: "400px" }}>
         <h4>{title}</h4>
         <p>{designation}</p>
         {description}
-        <a target={"_blank"} href={`https://twitter.com/${title}`}>
+        {/* <a target={"_blank"} href={`https://twitter.com/${title}`}>
           <img src={assets.twitter} alt='' />
           Follow
-        </a>
+        </a> */}
       </div>
     </>
   );
