@@ -62,14 +62,14 @@ const team = [
   {
     background: assets.teamPattern1,
     profile: assets.team3,
-    title: 'Head of Operations & logistics',
+    title: 'Zany smith',
     designation: 'Head of Operations & logistics',
     description: <p>Been working in Operations & logistics for over 10years. I have been heading and managing effective solutions for the delivery industry.Significant experience working in warehousing and delivery companies that facilitate large scale logistical operations</p>,
   },
   {
     background: assets.teamPattern2,
     profile: assets.team4,
-    title: 'Head of Finance and Analytics',
+    title: 'Anthony williams',
     designation: 'Head of Finance and Analytics',
     description: <p>Over the last 8 years, I have been working as Operations & financial Manager experience in management and senior management. This includes managing a $500bn budget for a leading transport and logistics provider.</p>,
   },
@@ -165,7 +165,7 @@ const Index = () => {
         <div className='wrapper'>
           <div className='journey_sofar_iner'>
             <div className='journey_sofar_top'>
-              <h2 className='superion-font'>NFTsnapback Journey So Far..</h2>
+              <h2 className='superion-font'>O.G.C || NFTsnapback Journey So Far..</h2>
               <p>
               NFTsnapback has been building in the background and we are finally at a junction to provide the best quality Merchandise to the #NFTcommunity.
               </p>
