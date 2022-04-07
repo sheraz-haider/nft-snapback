@@ -867,10 +867,15 @@ body {
   list-style: none;
   max-width: 40%;
   flex-wrap: wrap;
+  height: 100%;
+  grid-gap: 20px;
 }
-.nft_charity_right li {
+.nft_charity_right div {
   width: 46%;
-  margin: 0 2% 25px;
+  min-width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* margin: 0 2% 25px; */
 }
 
 .collect_nft {
@@ -2275,11 +2280,11 @@ body.toggle {
   .how_it_works h2 {
     margin-bottom: 20px;
   }
-  .nft_charity_right li {
+  .nft_charity_right div {
     width: 100%;
     margin: 0 0 20px;
   }
-  .nft_charity_right li img {
+  .nft_charity_right div img {
     width: 100%;
     height: auto;
   }

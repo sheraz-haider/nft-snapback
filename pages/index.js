@@ -129,8 +129,9 @@ const Index = () => {
             <div className='hero_container_cont'>
               <h2>
                 O.G.C || NFTsnapback is the first physical snapback hat
-                collection that is backed by an NFT (Non-Fungible Token).
-                NFTsnapback aims to be the number 1 snapback brand.
+                collection that is backed by an NFT (Non-Fungible Token) and
+                metaverse ready wearable item. Creating unique apparel
+                experiences in both the physical and virtual world.
               </h2>
               <div className='hero_container_buttons'>
                 <a href='https://www.heyotetsuo.com/kongz-claim/'>Claim Now</a>
@@ -247,51 +248,66 @@ const Index = () => {
                 O.G.C || NFTsnapback Journey So Far..
               </h2>
               <p>
-                NFTsnapback has been building in the background and we are
-                finally at a junction to provide the best quality Merchandise to
-                the #NFTcommunity.
+                NFTsnapback has quietly been building since 2021 with the goal
+                of creating a metaverse apparel brand that blends the digital
+                and physical world through merchandise helping to create
+                identities, form communities and stimulate creative expression.
+                Through various light bulb moments, we are finally ready to
+                share our high quality, unique range of product(s) and services
+                with the #NFTcommunity!
               </p>
             </div>
             <ul className='journey_sofar_list'>
               <li>
                 <h3>How It Started:</h3>
                 <p>
-                  As mentioned through many medium posts the idea of O.G.C ||
-                  NFTsnapback came from while being part of the Cyberkong
-                  community. The reason behind it is simple, we believe that it
-                  is inevitable that the world of physical fashion, image and
-                  style will merge with the realm of NFTs like we have already
-                  seen with the collectible and gaming sectors. So staring as
-                  early as August 2021 the concept was in motion with a
-                  successful soft launch using a Cyberkong #327.
+                  As mentioned in earlier Mediums posts, the idea for the O.G.C
+                  || NFTsnapback brand was inspired by my involvement with the
+                  CyberKongz community. CyberKongz have created a very distinct
+                  brand in the space, forming its own identity and tribe.
+                  Observing how a digital profile picture (PFP) project can be
+                  so powerful in uniting people of all different genders,
+                  ethnicities, and creed under a common set of values and ethos
+                  it became apparent that digital identities and communities
+                  will have an important part to play in the formation of
+                  culture. We also believe that it is inevitable that the world
+                  of physical fashion, image, and style – key components of
+                  cultural values and identity – will merge with the realm of
+                  NFTs like we have already seen with the collectible and gaming
+                  sectors. And thus, we want to be at the forefront of this
+                  revolution. So, in August 2021 the concept was in motion with
+                  the successful soft launch of the first NFT snapback hat
+                  production run using CyberKong #327 (Cryptolander’s main Kong)
+                  as the brand asset.
                 </p>
               </li>
               <li>
                 <h3>Genesis Soft Launch:</h3>
                 <p>
-                  There was 275 Genesis O.G.C || KONGZ NFTsnapback that was
-                  created. These NFT at the time was all airdropped using a
-                  Snapshot of cyberkongz holders at the time, through the smart
-                  contract. As months went by we sourced the finest quality
-                  hats, production company and packing company. This trend
-                  hasn’t gone unnoticed by major apparel brands either as we
-                  have seen with the recent Adidas and Nike entrants into the
-                  NFT space. And thus, it is clear that there is significant
-                  opportunity in creating a unique, community focused experience
-                  in the Digi-physical space.
+                  For the soft launch 275 Genesis O.G.C || KONGZ NFTsnapback
+                  NFT’s backed by a claimable physical snapback hat were
+                  created. The NFT’s were all airdropped to Genesis CyberKongz
+                  holders using a snapshot of wallet addresses at an agreed, and
+                  communicated, point in time through the smart contract. We
+                  also worked long and hard to source the finest quality
+                  suppliers, ensuring that our hats and customer experience
+                  deliver on the high standards on which we are building this
+                  premium brand. Community feedback for the initial proof of
+                  concept soft launch was amazing. For our full launch we have
+                  built out our own platform and smart contract that will make
+                  creating and claiming physical products even easier for all
+                  our customers and partners.
                 </p>
               </li>
               <li>
-                <h3>Claim Success:</h3>
+                <h3>Launching with a Bang!</h3>
                 <p>
-                  Finally the day came when the NFT holders were able to claim
-                  their NFTsnapback. A great success and achievement where
-                  NFTsnapback distributed the 1st NFT the was back by a physical
-                  SNAPBACK. This proof of concept was amazing to see and the
-                  community has been appreciative and amazed on the quality
-                  Merchandise they had received. Now we have built out our own
-                  platform using our own Smart Contract that will make creating
-                  and claiming Physical Assets easy for all our customers.
+                  To introduce O.G.C || NFTsnapback to the #NFTcommunity, we are
+                  excited to collaborate with 4 of the most impactful
+                  projects/Influencers in the NFT space! We love what these
+                  partners are doing and are privileged to be working with them
+                  to share our merchandise experiences with their members and
+                  community.
                 </p>
               </li>
               <li>
@@ -306,56 +322,59 @@ const Index = () => {
                   <ul style={{ marginLeft: '50px' }}>
                     <li>
                       <p>
-                        Avastars: Using an NFT of a previous co-founder @NFT42.
-                        (100% proceeds go to charity)
+                        Avastars Collab – one of the most established and
+                        engaged NFT communities. Hats will be branded with an
+                        NFT of a previous Co-Founder @NFT42. 100% of the
+                        proceeds will go to charity.
                       </p>
                     </li>
                     <li>
                       <p>
-                        Cloudwhite, an Influencer in the NFT space and the
-                        Founder of $COKE Axie Infinity.
+                        Cloudwhite Collab – an Influencer in the NFT space with
+                        a large and engaged following; and the Founder of $COKE
+                        Axie Infinity.
                       </p>
                     </li>
                     <li>
                       <p>
-                        Eric P. Rhodes, Founder of Unofficial Punks the man that
-                        stared the whole derivatives of the Cryptopunk movement.
+                        Eric P. Rhodes – Founder of Unofficial Punks; and the
+                        brain behind the whole CryptoPunks derivatives movement.
                       </p>
                     </li>
                     <li>
                       <p>
-                        Florian Tappeser, a movie industry veteran who worked on
-                        many acclaimed animation hits like Hotel Transylvania
-                        and How To Train Your Dragon & has his on brand in
-                        Drippieverse™ and work with some of the biggest
-                        companies in the space such as Genies.
+                        Florian Tappeser – a movie industry veteran who worked
+                        on many acclaimed animated hits like ‘Hotel
+                        Transylvania’ and ‘How to Train Your Dragon’; and is the
+                        Founder of the creative NFT project Drippieverse™.
                       </p>
                     </li>
                   </ul>
                 </p>
                 <br />
                 <p>
-                  O.G.C || NFTsnapback are proud to be working with some of the
-                  most incredible people and communities in this space. Our
-                  Collaborations service will involve partnering with
-                  projects/communities to do a joint venture launch.O.G.C will
-                  create a collection of branded snapback hats offering a
-                  one-stop-shop solution, which would involve us doing the
-                  design samples, e-commerce, production, and distribution.
+                  O.G.C || NFTsnapback are proud to be working with these
+                  incredible partners and communities. If you’d like to discuss
+                  a collab with your brand or project, please do get in touch.
+                  For further details, please download the NFTsnapback deck
+                  here.
                 </p>
               </li>
               <li>
                 <h3>Minting Pass:</h3>
                 <p>
-                  O.G.C || NFTsnapback will create a 1-of-1’s service Mint Pass
-                  collection. The service will be targeted towards a mass market
-                  audience by enabling anyone to turn their PFP or NFT
-                  collection item(s) into a redeemable physical & digital
-                  wearable item. Effectively we will be offering a customisable
-                  experience where for example, the owner of a Cyberkong, Bored
-                  Ape or any favourite project can turn this NFT into a snapback
-                  hat. We know that this will give more power to encourage most
-                  important express someones identity through fashion.
+                  As well as our Collaborations service, O.G.C || NFTsnapback
+                  will also be offering a 1-of-1’s Mint Pass service. This
+                  service will be targeted towards a mass market audience by
+                  enabling anyone to turn their PFP or NFT collection item(s)
+                  into a redeemable physical and metaverse wearable item.
+                  Effectively we will be offering a customisable experience
+                  where for example, the owner of a CyberKongz, Bored Ape or any
+                  project can turn this NFT into a snapback hat. Taking
+                  personalised branding and merchandise to a whole new level!
+                  And just like with our Collabs, all NFTsnapback physical hats
+                  come with an identical metaverse wearable hat to make digital
+                  avatars look even more amazing.
                 </p>
               </li>
             </ul>
@@ -456,10 +475,10 @@ const Index = () => {
       <div className='nfst_medium'>
         <div className='wrapper'>
           <div className='nfst_medium_iner'>
-            <h3 className='superion-font'>O.G.C || NFTsnapback Social Posts</h3>
+            <h3 className='superion-font'>O.G.C || NFTsnapback Socials</h3>
             <p>
-              Stay updated and informed on when the latest drops and update on
-              O.G.C || NFTsnapbackt.
+              Stay up to date and informed on the latest developments, product
+              updates and drops on O.G.C || NFTsnapback.
             </p>
             <div className='btn-container'>
               <a href='http://www.medium.com/@nftsnapback'>
@@ -488,19 +507,24 @@ const Index = () => {
               <div className='how_it_works_icon'>
                 <img src={assets.nuyIcon} alt='' />
               </div>
-              <h3>Buy O.G.C || NFTsnapback</h3>
+              <h3>How to Purchase an O.G.C || NFTsnapback</h3>
               <p style={{ textAlign: 'left' }}>
-                To be able to buy our NFTs there will be two ways.  
+                An NFTsnapback can be acquired either by one of the following
+                ways:  
                 <br />
                 <br />
-                1. When ever we announce a collaboration or when a new series of
-                Mint pass, these will be able to be bought through our minting
-                page. 
+                1. By being part of a community and/or project we officially
+                collaborate with. 
                 <br />
                 <br />
-                2. If you missed out on the minting, then have a look at
-                Opensea, Look Rare and see if there are any O.G.C || NFTsnapback
-                available on the open market.
+                2. By purchasing a Mint Pass – these can be bought on our
+                minting page.
+                <br />
+                <br />
+                3. On the secondary market. As collab and Mint Pass quantities
+                can be small, there might be an opportunity to purchase an
+                unclaimed NFT on Opensea or Look Rare by searching for O.G.C ||
+                NFTsnapback.
               </p>
             </li>
             <li>
@@ -509,13 +533,15 @@ const Index = () => {
               </div>
               <h3>Claim O.G.C || NFTsnapback</h3>
               <p style={{ textAlign: 'left' }}>
-                To claim the physical Item all the new collections will require
-                you to burn your NFT (Series 1 Kongz Will not be burnable). 
-                Upon Burning your NFT you will be required to fill out your
-                shipping details. Once we receive your information your NFT will
-                be updated and inform you of the status of your Physical item.
-                We have created a system that allows you to keep track of your
-                order on our Collected NFT page.
+                To claim the physical item the owner of the NFTsnapbacks NFT
+                will be required to burn the NFT (Series 1 KONGZ NFTs will not
+                be burnable). Upon Burning the NFT you will be required to fill
+                out your shipping details. Once received, the hat will be
+                dispatched to your physical location. We’ve even made this
+                process more streamlined for you by providing a status tracker
+                on your Account page. In addition, we have also created a unique
+                system that allows you to keep track of your order even after
+                the NFT is burnt.
               </p>
             </li>
             <li>
@@ -524,13 +550,12 @@ const Index = () => {
               </div>
               <h3>O.G.C || NFTsnpaback Decentraland Wearable</h3>
               <p style={{ textAlign: 'left' }}>
-                We have now created an O.G.C || NFTsnapback Decentraland
-                wearable for all customers that claim their physical
-                NFTsnapback. This wearable item will be airdropped and there is
-                no additional steps the customer has to take. As clothing is one
-                of the fundamental facets of identity it makes sense that we
-                want your identity image and character to be able to be
-                transferred into the metaverse.
+                We have also created an O.G.C || NFTsnapback Decentraland
+                wearable for all customers that claim their physical NFTsnapback
+                hat. This wearable item will be airdropped to you at no
+                additional cost, nor are there any additional steps required.
+                Get ready to make your avatar an instant celebrity and trend
+                setter in the metaverse!
               </p>
             </li>
           </ul>
@@ -572,7 +597,7 @@ const Index = () => {
                 this space focus on building a narrative that is broader than
                 just growth and profits. The narrative of reinvesting to improve
                 outcomes is something that should and will be a fundamental part
-                of the O.G.C || NFTsnapback brand.
+                of the O.G.C brand.
               </p>
               <p style={{ marginBottom: '5px' }}>
                 Our charity partners of choice will be varied, but initially
@@ -591,22 +616,28 @@ const Index = () => {
                 A registered Ethereum (ETH) Address will be assigned to the
                 O.G.C Charitable Giving Programme.
               </p>
+              <p>
+                Our Charitable Giving Programme will be funded from the
+                following sources:
+              </p>
+              <p>• 1.25% from all NFT royalties</p>
+              <p>• 10% of net profits.</p>
 
               <a href='http://www.medium.com/@nftsnapback'>
                 Read on Medium <img src={assets.mediumIcon} alt='' />
               </a>
             </div>
-            <ul className='nft_charity_right'>
-              <li>
+            <div className='nft_charity_right'>
+              <div>
                 <img src={assets.charity1} alt='' />
-              </li>
-              <li>
+              </div>
+              <div>
                 <img src={assets.charity2} alt='' />
-              </li>
-              <li>
+              </div>
+              <div>
                 <img src={assets.charity3} alt='' />
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
