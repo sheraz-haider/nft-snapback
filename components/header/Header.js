@@ -1,28 +1,27 @@
 import React from 'react';
-import { useEffect, useState } from 'react'
-import { ethers } from 'ethers'
-import Web3Modal from "web3modal"
+import { useEffect, useState, useRef } from 'react';
+import { ethers } from 'ethers';
+import Web3Modal from 'web3modal';
 import Link from 'next/link';
 
 import assets from '../../assets/images';
 
 const Header = () => {
-  const [address, setAddress] = useState(null)
-  const [balance, setBalance] = useState(0.00)
-  const [popupOpened, setPopupOpened] = useState(false)
+  const [address, setAddress] = useState(null);
+  const [balance, setBalance] = useState(0.0);
+  const [popupOpened, setPopupOpened] = useState(false);
   const [loggedOut, setLoggedOut] = useState(false);
 
   useEffect(() => {
-    if(!loggedOut)
-      connect()
-  }, [address])
+    if (!loggedOut) connect();
+  }, [address]);
 
   async function connect() {
-    const web3Modal = new Web3Modal()
-    const connection = await web3Modal.connect()
-    const provider = new ethers.providers.Web3Provider(connection)
-    const _address = await provider.getSigner().getAddress()
-    const _bal = await provider.getSigner().getBalance()
+    const web3Modal = new Web3Modal();
+    const connection = await web3Modal.connect();
+    const provider = new ethers.providers.Web3Provider(connection);
+    const _address = await provider.getSigner().getAddress();
+    const _bal = await provider.getSigner().getBalance();
     // const _artist = await axios({
     //   method: 'get',
     //   url: `/api/v1/artists`,
@@ -31,15 +30,23 @@ const Header = () => {
     // if(_artist.data.length) {
     //   setIsRegistered(true)
     // }
-    setBalance(Number(ethers.utils.formatEther(Number(_bal).toString())).toFixed(2))
-    setAddress(_address)
+    setBalance(
+      Number(ethers.utils.formatEther(Number(_bal).toString())).toFixed(2)
+    );
+    setAddress(_address);
     console.log(address);
   }
 
   async function disconnect() {
-    setLoggedOut(true)
-    setAddress(null)
+    setLoggedOut(true);
+    setAddress(null);
   }
+
+  const menu = useRef();
+
+  const handleToggleMenu = () => {
+    menu.current.classList.toggle('show');
+  };
 
   return (
     <header className='main_header'>
@@ -47,23 +54,23 @@ const Header = () => {
         <div className='header_iner'>
           <div className='header_iner_left'>
             <a href='#' className='logo_main'>
-              <img src={assets.logo} alt='' style={{ height: "70px" }} />
+              <img src={assets.logo} alt='' style={{ height: '70px' }} />
             </a>
-            <ul className='main_menu'>
-              <li>
+            <ul className='main_menu' ref={menu}>
+              <li onClick={handleToggleMenu}>
                 <Link href='/'>Home</Link>
               </li>
-              <li>
+              <li onClick={handleToggleMenu}>
                 <Link href='/mint-nfts'>Mint NFTs</Link>
               </li>
-              <li>
+              <li onClick={handleToggleMenu}>
                 <Link href='/claim-nfts'>Claim NFTs</Link>
               </li>
-              <li>
+              <li onClick={handleToggleMenu}>
                 <Link href='/collected-nfts'>Collected NFTs</Link>
               </li>
             </ul>
-            <span className='mob_menu_icon'></span>
+            <span className='mob_menu_icon' onClick={handleToggleMenu}></span>
           </div>
           <div className='header_iner_right'>
             <ul className='header_social'>
@@ -73,7 +80,10 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a target={'_blank'} href='https://www.instagram.com/nftsnapback'>
+                <a
+                  target={'_blank'}
+                  href='https://www.instagram.com/nftsnapback'
+                >
                   <img src={assets.instagram} alt='' />
                 </a>
               </li>
@@ -84,10 +94,10 @@ const Header = () => {
               </li>
             </ul>
             {!address ? (
-              <div
-                className='header_custom_select connect'
-              >
-                <a href='#' onClick={connect}>Connect Wallet</a>
+              <div className='header_custom_select connect'>
+                <a href='#' onClick={connect}>
+                  Connect Wallet
+                </a>
               </div>
             ) : (
               <div className='header_custom_select'>
@@ -102,7 +112,9 @@ const Header = () => {
                             <img src={assets.wallet} alt='' />
                           </div>
                           <div className='header_wallet_details'>
-                            <h4>{address.slice(0, 13) + '...' + address.slice(35)}</h4>
+                            <h4>
+                              {address.slice(0, 13) + '...' + address.slice(35)}
+                            </h4>
                             <p>Metamask</p>
                           </div>
                         </div>
@@ -112,14 +124,14 @@ const Header = () => {
                       </div>
                     </div>
                     <div className='wallet_drop_down_btm'>
-                      <a href='#' onClick={disconnect}>Disconnect Wallet</a>
+                      <a href='#' onClick={disconnect}>
+                        Disconnect Wallet
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             )}
-
-
           </div>
         </div>
       </div>
