@@ -11,7 +11,7 @@ const TeamMember = ({ background, profile, title, description, designation }) =>
           <img src={profile} alt='' />
         </span>
       </div>
-      <div className='team_detail' style={{ minHeight: "400px" }}>
+      <div className='team_detail' style={{ minHeight: "350px" }}>
         <h4>{title}</h4>
         <p>{designation}</p>
         {description}
