@@ -100,7 +100,7 @@ const MintNfts = () => {
   }
 
   const mintToken = async item => {
-    return;
+    // return;
     setWait('Minting token...');
     setMinting(item.id);
     const web3Modal = new Web3Modal();
