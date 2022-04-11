@@ -1,18 +1,18 @@
-import '../styles/globals.css'
-import Link from 'next/link'
-import Head from 'next/head'
-import { useEffect, useState } from 'react'
-import { ethers } from 'ethers'
-import Web3Modal from "web3modal"
-import axios from 'axios'
+import '../styles/globals.css';
+import Link from 'next/link';
+import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import { ethers } from 'ethers';
+import Web3Modal from 'web3modal';
+import axios from 'axios';
 import '../assets/css/style.css';
 import '../assets/css/ReactToastify.css';
 
 function Marketplace({ Component, pageProps }) {
-  const [address, setAddress] = useState(null)
-  const [balance, setBalance] = useState(0.00)
-  const [isRegistered, setIsRegistered] = useState(false)
-  const [popupOpened, setPopupOpened] = useState(false)
+  const [address, setAddress] = useState(null);
+  const [balance, setBalance] = useState(0.0);
+  const [isRegistered, setIsRegistered] = useState(false);
+  const [popupOpened, setPopupOpened] = useState(false);
   // useEffect(() => {
   //   if(!address)
   //     connect()
@@ -36,18 +36,20 @@ function Marketplace({ Component, pageProps }) {
   //   console.log(address, _artist.data);
   // }
 
-
   return (
     <div>
       <Head>
-        <meta name="keywords" content="bootstrap, creabik, ThemeForest, bootstrap5, agency theme, saas
-        theme, sass, html5" />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="English" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> - wallets </title>
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta
+          name='keywords'
+          content='bootstrap, creabik, ThemeForest, bootstrap5, agency theme, saas
+        theme, sass, html5'
+        />
+        <meta name='robots' content='index, follow' />
+        <meta name='language' content='English' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title>NFTSnapback Collection</title>
+        <meta name='msapplication-TileColor' content='#da532c' />
+        <meta name='theme-color' content='#ffffff' />
       </Head>
 
       {/* {address ? (
@@ -92,9 +94,8 @@ function Marketplace({ Component, pageProps }) {
       )} */}
 
       <Component {...pageProps} />
-
     </div>
-  )
+  );
 }
 
-export default Marketplace
+export default Marketplace;

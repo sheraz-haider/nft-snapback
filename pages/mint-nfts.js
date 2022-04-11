@@ -64,9 +64,11 @@ const MintNfts = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (!address) loadConnectedProfile();
-    else {
-      loadNFTs();
+    if (window.ethereum) {
+      if (!address) loadConnectedProfile();
+      else {
+        loadNFTs();
+      }
     }
   }, [address]);
 
