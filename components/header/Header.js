@@ -13,12 +13,13 @@ const Header = () => {
   const [loggedOut, setLoggedOut] = useState(false);
 
   useEffect(() => {
-    if (!loggedOut) connect();
+    if (window.ethereum && !loggedOut) connect();
   }, [address]);
 
   async function connect() {
     const web3Modal = new Web3Modal();
     const connection = await web3Modal.connect();
+
     const provider = new ethers.providers.Web3Provider(connection);
     const _address = await provider.getSigner().getAddress();
     const _bal = await provider.getSigner().getBalance();
