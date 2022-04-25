@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const connectionString = 'mongodb://127.0.0.1:27017/nft-marketplace';
+const connectionString = 'mongodb://127.0.0.1:27017/nft-marketplace-v1';
 
 // todo workaround for HMR. It remove old model before added new ones
 Object.keys(mongoose.connection.models).forEach(key => {

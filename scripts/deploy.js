@@ -7,10 +7,11 @@ async function main() {
   // await nftMarket.deployed();
   // console.log("nftMarket deployed to:", nftMarket.address);
 
-  const NFT = await hre.ethers.getContractFactory("Snapback");
+  const NFT = await hre.ethers.getContractFactory("NFTsnapback");
   const tokenPrice = hre.ethers.utils.parseUnits('0.08', 'ether')
+  const userCap = "5";
 
-  const nft = await NFT.deploy(tokenPrice);
+  const nft = await NFT.deploy(tokenPrice, userCap);
   await nft.deployed();
   console.log("nft deployed to:", nft.address);
 

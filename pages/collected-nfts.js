@@ -10,7 +10,7 @@ import Web3Modal from 'web3modal';
 
 import { nftaddress } from '../config';
 
-import Snapback from '../artifacts/contracts/Snapback.sol/Snapback.json';
+import NFTsnapback from '../artifacts/contracts/NFTsnapback.sol/NFTsnapback.json';
 
 import Moralis from 'moralis';
 import assets from '../assets/images';
@@ -110,7 +110,7 @@ const CollectedNfts = () => {
       });
     }
     /* next, create the item */
-    let contract = new ethers.Contract(nftaddress, Snapback.abi, signer);
+    let contract = new ethers.Contract(nftaddress, NFTsnapback.abi, signer);
     let transaction = await contract.burnToken(item.id);
     await transaction.wait();
 

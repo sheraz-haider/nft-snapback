@@ -5,7 +5,7 @@ const {
   ethers
 } = require("hardhat");
 
-describe("Snapback", function () {
+describe("NFTsnapback", function () {
   it("Should create and execute market sales", async function () {
     // const Market = await ethers.getContractFactory("NFTMarket")
     // const market = await Market.deploy()

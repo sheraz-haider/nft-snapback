@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ethers } from 'ethers';
 import Web3Modal from 'web3modal';
 import { nftaddress, nftmarketaddress } from '../config';
-import Snapback from '../artifacts/contracts/Snapback.sol/Snapback.json';
+import NFTsnapback from '../artifacts/contracts/NFTsnapback.sol/NFTsnapback.json';
 import Header from '../components/header/Header';
 import InnerFooter from '../components/InnerFooter/InnerFooter';
 import assets from '../assets/images';
@@ -112,7 +112,7 @@ const MintNfts = () => {
 
     try {
       /* next, create the item */
-      let contract = new ethers.Contract(nftaddress, Snapback.abi, signer);
+      let contract = new ethers.Contract(nftaddress, NFTsnapback.abi, signer);
       const tokenPrice = ethers.utils.parseUnits('0.08', 'ether');
 
       let transaction = await contract.mintToken(item.id, {
