@@ -46,9 +46,9 @@ const __nfts = [
   },
   {
     id: 4,
-    name: 'Cocain Cowboy',
+    name: 'Cocaine Cowboy',
     description:
-      'The 1st official CloudWhite $Coke Merchandise collaborated with NFTsnapabck. CloudWhite is regarded as one of the OG’s in the NFT space. Known for his influential role with Axie Infinity community amongst many other things, but the creation of $COKE or Cocain Cowboy was something special. CloudWhite was the 1st to start an art campaign around a very unique little creature: Axie #2646. Now Officially you can buy the 1st $coke merchandise in partnership with NFTsnapback.',
+      'The 1st official Cloudwhite and $coke Merchandise collaborated with NFTsnapabck. Cloudwhite is regarded as one of the OG’s in the NFT space. Known for his influential role with Axie Infinity community amongst many other things, but the creation of $coke or Cocaine Cowboy was something special. Cloudwhite was the 1st to start an art campaign around a very unique little creature: Axie #2646. Now Officially you can buy the 1st $coke merchandise in partnership with NFTsnapback.',
     image:
       'https://bafybeifdq7dsqe4zmzprddkrtzyjx456h46wgjwhysntvm3kv2h3slyr3u.ipfs.infura-ipfs.io/',
     video:
@@ -102,7 +102,7 @@ const MintNfts = () => {
   }
 
   const mintToken = async item => {
-    return;
+    // return;
     setWait('Minting token...');
     setMinting(item.id);
     const web3Modal = new Web3Modal();

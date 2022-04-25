@@ -17,6 +17,7 @@ import assets from '../assets/images';
 import BurnedNft from '../components/burnedNft/BurnedNft';
 
 import { ToastContainer, toast } from 'react-toastify';
+import { useRouter } from 'next/router';
 
 /* Moralis init code */
 const serverUrl = 'https://z45j2piboebx.usemoralis.com:2053/server';
@@ -30,6 +31,7 @@ const CollectedNfts = () => {
   const [updateShippingAddress, setUpdateShippingAddress] = useState(null);
 
   const [address, setAddress] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (window.ethereum) {
@@ -122,7 +124,8 @@ const CollectedNfts = () => {
     });
     if (nft.data) {
       // console.log(nft.data);
-      loadNFTs();
+      await loadNFTs();
+      router.reload(window.location.pathname);
       return;
     }
 

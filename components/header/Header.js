@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { ethers } from 'ethers';
 import Web3Modal from 'web3modal';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import assets from '../../assets/images';
 
@@ -11,6 +12,7 @@ const Header = () => {
   const [balance, setBalance] = useState(0.0);
   const [popupOpened, setPopupOpened] = useState(false);
   const [loggedOut, setLoggedOut] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     if (window.ethereum && !loggedOut) connect();
@@ -36,6 +38,10 @@ const Header = () => {
     );
     setAddress(_address);
     console.log(address);
+
+    if (router.pathname === '/burned-nfts' && _address !== '0x1Da8fFf659DDc046c83B0ef259Ee0732150D8b9c') {
+      router.push('/');
+    }
   }
 
   async function disconnect() {
