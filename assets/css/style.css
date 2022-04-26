@@ -20,6 +20,30 @@ img {
 a {
   text-decoration: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  display: none;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 100%;
@@ -1537,7 +1561,7 @@ body.toggle {
   flex-wrap: wrap;
 }
 .upload_nfts_form_field {
-  width: 48%;
+  width: 100%;
   margin-bottom: 25px;
 }
 .upload_nfts_form_field label {
@@ -1550,7 +1574,8 @@ body.toggle {
   color: #ffffff;
 }
 .upload_nfts_form_field input,
-.upload_nfts_form_field select {
+.upload_nfts_form_field select,
+.upload_nfts_form_field textarea {
   height: 54px;
   width: 100%;
   border: none;
@@ -1562,6 +1587,15 @@ body.toggle {
   font-size: 18px;
   color: #ffffff;
   border-radius: 10px;
+}
+.upload_nfts_form_field textarea {
+  height: 100px;
+  outline: none;
+  padding: 10px;
+  max-width: -webkit-fill-available;
+  min-width: -webkit-fill-available;
+  min-height: 100px;
+  max-height: 300px;
 }
 .upload_nfts_form_field select option {
   color: #000;

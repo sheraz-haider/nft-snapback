@@ -61,6 +61,7 @@ const MintNfts = () => {
   const [wait, setWait] = useState(null);
   const [minting, setMinting] = useState(null);
   const [nfts, setNfts] = useState([]);
+  const [tokens, setTokens] = useState([]);
   const router = useRouter();
 
   useEffect(() => {
@@ -68,6 +69,7 @@ const MintNfts = () => {
       if (!address) loadConnectedProfile();
       else {
         loadNFTs();
+        loadTokens();
       }
     }
   }, [address]);
@@ -84,6 +86,21 @@ const MintNfts = () => {
 
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  async function loadTokens() {
+    try {
+      const __tokens = await axios({
+        method: 'get',
+        url: `/api/v1/token`,
+      });
+      if (__tokens.data) {
+        console.log(__tokens.data);
+        setTokens(__tokens.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async function loadNFTs() {
@@ -170,7 +187,7 @@ const MintNfts = () => {
       </div>
       <div className='mint_collabs'>
         <div className='wrapper'>
-          {__nfts.map(item => (
+          {tokens.map(item => (
             <MintCollabItem
               key={`nft-${item.id}`}
               img={item.image}

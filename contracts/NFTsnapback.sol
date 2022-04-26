@@ -9,6 +9,8 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 contract NFTsnapback is ERC1155 {
     using Counters for Counters.Counter;
 
+    string public name = "O.G.C || NFTsnapback";
+
     uint256 public tokenPrice; // Price of token for minter
     address public owner; // Contract owner address
 
@@ -60,9 +62,12 @@ contract NFTsnapback is ERC1155 {
     }
 
     // Get latest token ID
-    function getLatestTokenId() public view returns (uint256) {
+    function getLatestTokenId() public view returns (string memory) {
         uint256 currentItemId = _tokenIds.current();
-        return currentItemId - 1;
+        if (currentItemId == 0) {
+            return "";
+        }
+        return Strings.toString(currentItemId - 1);
     }
 
     // Mint single token against token ID

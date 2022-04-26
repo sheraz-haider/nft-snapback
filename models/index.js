@@ -54,4 +54,25 @@ export const Snapback = {
   },
 }
 
-// [ new ObjectId("619ccdd82d5c3ab5bd17734e") ] [ new ObjectId("619ccdd82d5c3ab5bd17734e") ]
+
+let tokenSchema = new mongoose.Schema({
+  id: { type: Number, required: 'ID is required' },
+  name: { type: String, trim: true, required: 'Name is required' },
+  description: { type: String },
+  image: { type: String, trim: true },
+  video: { type: String, trim: true },
+  createdAt: { type: Date, default: Date.now }
+});
+
+tokenSchema.plugin(uniqueValidator);
+let _Token = mongoose.model('Token', tokenSchema);
+
+export const Token = {
+  create: async (data) => {
+    let newObj = new _Token(data);
+    return await newObj.save();
+  },
+  find: async (fQ = {}) => await _Token.find(fQ),
+  findByOwner: async (owner) => await _Token.find({ owner }),
+  findById: async (id) => await _Token.findById(id),
+}
