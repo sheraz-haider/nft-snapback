@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const MintCollabItem = ({ title, description, img, video, minting, mint, id, canMintMore, totalMinted }) => {
+const MintCollabItem = ({ title, description, img, video, minting, mint, cap, id, canMintMore, totalMinted }) => {
   return (
     <div className='mint_collabs_main'>
       <div className='mint_collabs_img'>
@@ -18,7 +18,7 @@ const MintCollabItem = ({ title, description, img, video, minting, mint, id, can
           </a> */}
         </div>
         {/* <Link href='/upload-nfts'> */}
-          {totalMinted === 50 || canMintMore === 0 ? (
+          {totalMinted === cap || canMintMore === 0 ? (
             <span className='mint_collabs_cta' style={{ cursor: "pointer", fontStyle: "italic" }}>Can't Mint</span>
           ) : (minting && minting === id ? (
             <span className='mint_collabs_cta' style={{ cursor: "pointer", fontStyle: "italic" }}>Minting...</span>
@@ -26,8 +26,8 @@ const MintCollabItem = ({ title, description, img, video, minting, mint, id, can
             <span className='mint_collabs_cta' style={{ cursor: "pointer" }} onClick={mint}>Mint</span>
           ))}
           <div className='mint-stats'>
-            <span>{totalMinted}/50 minted</span>
-            <span>You can mint {50 - totalMinted >= canMintMore ? canMintMore : 50 - totalMinted} more</span>
+            <span>{totalMinted}/{cap} minted</span>
+            <span>You can mint {cap - totalMinted >= canMintMore ? canMintMore : cap - totalMinted} more</span>
           </div>
         {/* </Link> */}
       </div>

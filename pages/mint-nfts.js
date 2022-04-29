@@ -195,6 +195,7 @@ const MintNfts = () => {
               id={item.id}
               title={item.name}
               description={item.description}
+              cap={item.cap}
               minting={minting}
               mint={() => mintToken(item)}
               canMintMore={

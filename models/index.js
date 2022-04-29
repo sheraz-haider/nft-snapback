@@ -61,6 +61,7 @@ let tokenSchema = new mongoose.Schema({
   description: { type: String },
   image: { type: String, trim: true },
   video: { type: String, trim: true },
+  cap: { type: Number, default: 50 },
   createdAt: { type: Date, default: Date.now }
 });
 

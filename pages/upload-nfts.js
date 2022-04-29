@@ -162,6 +162,7 @@ const UploadNfts = () => {
         data: {
           ...JSON.parse(data),
           // id: newTokenId,
+          cap,
         },
       });
       if (token.data) {
