@@ -20,7 +20,7 @@ const UploadNfts = () => {
   const [address, setAddress] = useState(null)
   const [fileUrl, setFileUrl] = useState(null)
   const [wait, setWait] = useState(null)
-  const [formInput, updateFormInput] = useState({ name: "", description: "" })
+  const [formInput, updateFormInput] = useState({ name: "", description: "", cap: 50 })
   const [file, setFile] = useState("");
   const [thumbnail, setThumbnail] = useState("");
   const router = useRouter()
@@ -105,8 +105,8 @@ const UploadNfts = () => {
 
   async function uploadToken() {
     setWait('Uploading asset...')
-    const { name, description } = formInput
-    if (!name || !description || !fileUrl) {
+    const { name, description, cap } = formInput
+    if (!name || !description || !cap || !fileUrl) {
       setWait(null);
       return;
     }
@@ -132,7 +132,7 @@ const UploadNfts = () => {
         const added = await client.add(data).catch(console.log)
         const url = `https://ipfs.infura.io/ipfs/${added.path}`
         /* after file is uploaded to IPFS, pass the URL to save it on Polygon */
-        createToken(data, url)
+        createToken(data, url, cap)
       } catch (error) {
         console.log('Error uploading file: ', error)
       }
@@ -142,7 +142,7 @@ const UploadNfts = () => {
 
   }
 
-  async function createToken(data, url) {
+  async function createToken(data, url, cap) {
     setWait('Creating token...')
     const web3Modal = new Web3Modal();
     const connection = await web3Modal.connect();
@@ -152,7 +152,7 @@ const UploadNfts = () => {
     try {
       /* next, create the item */
       let contract = new ethers.Contract(nftaddress, NFTsnapback.abi, signer);
-      let transaction = await contract.createToken(url, 50);
+      let transaction = await contract.createToken(url, Number(cap));
       let _d = await transaction.wait();
       console.log(_d);
 
@@ -230,10 +230,6 @@ const UploadNfts = () => {
       <div className='inner_hero'>
         <div className='wraper'>
           <h1>Upload NFTs</h1>
-          <p>
-            Lorem ipsum dolor sit amet,
-            <br /> consectetur adipiscing elit.
-          </p>
         </div>
       </div>
       <div className='upload_nfts'>
@@ -249,6 +245,10 @@ const UploadNfts = () => {
               <div className='upload_nfts_form_field'>
                 <label>Description</label>
                 <textarea onChange={e => updateFormInput({ ...formInput, description: e.target.value })} />
+              </div>
+              <div className='upload_nfts_form_field'>
+                <label>Minting Cap</label>
+                <input type="number" onChange={e => updateFormInput({ ...formInput, cap: e.target.value })} />
               </div>
               <div className='upload_nfts_form_upload'>
                 <div className='upload_nfts_form_field'>

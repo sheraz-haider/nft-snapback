@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BurnedNft = ({ title, img, item, back, type }) => {
   const [shippingAddress, setShippingAddress] = useState(item.shippingAddress);
@@ -21,6 +23,15 @@ const BurnedNft = ({ title, img, item, back, type }) => {
     })
     if(nft.data) {
       // console.log(nft.data);
+      toast.success('Shipping details updated!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       back()
       return;
     }
@@ -36,6 +47,16 @@ const BurnedNft = ({ title, img, item, back, type }) => {
     })
     if(nft.data) {
       // console.log(nft.data);
+      toast.success('Shipping status updated!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+
       back()
       return;
     }
@@ -105,6 +126,17 @@ const BurnedNft = ({ title, img, item, back, type }) => {
 
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        />
     </div>
   );
 };

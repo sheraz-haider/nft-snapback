@@ -39,7 +39,7 @@ const Header = () => {
     setAddress(_address);
     console.log(address);
 
-    if (router.pathname === '/burned-nfts' && _address !== '0x1Da8fFf659DDc046c83B0ef259Ee0732150D8b9c') {
+    if ((router.pathname === '/upload-nfts' || router.pathname === '/burned-nfts') && _address !== '0x1Da8fFf659DDc046c83B0ef259Ee0732150D8b9c') {
       router.push('/');
     }
   }
