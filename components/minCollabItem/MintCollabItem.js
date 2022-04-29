@@ -20,7 +20,7 @@ const MintCollabItem = ({ title, description, img, video, minting, mint, cap, id
         {/* <Link href='/upload-nfts'> */}
           {totalMinted === cap || canMintMore === 0 ? (
             <span className='mint_collabs_cta' style={{ cursor: "pointer", fontStyle: "italic" }}>Can't Mint</span>
-          ) : (minting && minting === id ? (
+          ) : (minting !== null && minting === id ? (
             <span className='mint_collabs_cta' style={{ cursor: "pointer", fontStyle: "italic" }}>Minting...</span>
           ) : (
             <span className='mint_collabs_cta' style={{ cursor: "pointer" }} onClick={mint}>Mint</span>
