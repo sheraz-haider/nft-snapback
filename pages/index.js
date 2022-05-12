@@ -123,7 +123,7 @@ const Index = () => {
                 experiences in both the physical and virtual world.
               </h2>
               <div className='hero_container_buttons'>
-                <a href='https://www.heyotetsuo.com/kongz-claim/'>Claim Now</a>
+                <Link to='/mint-nfts' href='/mint-nfts'>Mint Now</Link>
                 <a href='https://opensea.io/collection/ogcnftsnapback'>
                   Opensea
                 </a>
